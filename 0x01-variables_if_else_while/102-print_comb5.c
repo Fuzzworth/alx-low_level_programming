@@ -19,7 +19,7 @@ int main(void)
 		{
 			for (digit_three = 48; digit_three < 58; digit_three++)
 			{
-				for (digit_four  = 48; digit_three < 58; digit_three++)
+				for (digit_four  = 49; digit_three < 58; digit_three++)
 				{
 
 					putchar(digit_one);
