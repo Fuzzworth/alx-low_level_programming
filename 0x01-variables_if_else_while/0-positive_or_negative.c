@@ -2,7 +2,10 @@
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
-/* betty style doc for function main goes there */
+/**
+* main: - Program generates a random number and outputs the number and its designation 
+* Description: Generates a random number the outputs wheter or not it is positive or negative
+*/
 int main(void)
 {
 	int n;
