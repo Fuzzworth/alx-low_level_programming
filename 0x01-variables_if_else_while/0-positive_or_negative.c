@@ -3,7 +3,7 @@
 /* more headers goes there */
 #include <stdio.h>
 /*
-*main: - Program generates a random number and outputs the number and its designation
+*main: - Program generates a random numbers
 */
 int main(void)
 {
