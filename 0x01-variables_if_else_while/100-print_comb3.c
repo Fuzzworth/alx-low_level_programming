@@ -19,8 +19,7 @@ int main(void)
 			{
 				putchar(character_one);
 				putchar(character_two);
-			}						}
-
+			}
 			putchar(',');
 			putchar(' ');
 
