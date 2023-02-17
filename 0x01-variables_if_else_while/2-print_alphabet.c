@@ -1,10 +1,9 @@
 #include <stdio.h>
 /**
-* main - Program generates a random numbers
+* main - Program prints the alphabet lowercase
 *
-* Description: Program generates a random number
-* and prints it as well as its designation as positive,
-* negative or zero.
+* Description: Program prints lowercase characters of the aplphabet
+* followed by a new line
 *
 * Return: 0 if execution has no errors
 */
