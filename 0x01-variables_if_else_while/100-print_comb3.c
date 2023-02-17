@@ -15,7 +15,7 @@ int main(void)
 	{
 		for (character_two = 49; character_two < 58; character_two++)
 		{
-			if (character_one <= character_two)
+			if (character_one < character_two)
 			{
 				putchar(character_one);
 				putchar(character_two);
