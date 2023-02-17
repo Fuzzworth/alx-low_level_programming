@@ -19,8 +19,11 @@ int main(void)
 			{
 				putchar(character_one);
 				putchar(character_two);
-				putchar(',');
-				putchar(' ');
+				if (character_one == 57 && charactr_two == 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 
 		}
