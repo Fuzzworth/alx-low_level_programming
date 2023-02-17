@@ -11,7 +11,7 @@ int main(void)
 	int character_one;
 	int character_two;
 
-	for (character_one; = 48; character_two < 58; character_one++)
+	for (character_one = 48; character_two < 58; character_one++)
 	{
 		for (character_two = 49; character_two < 58; character_two++)
 		{
