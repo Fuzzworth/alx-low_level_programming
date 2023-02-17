@@ -18,7 +18,7 @@ int main(void)
 			if (digit_one < digit_four)
 			{
 				putchar((digit_one / 10) + 48);
-				putchar((digit_one % 10) + 48;
+				putchar((digit_one % 10) + 48);
 				putchar(' ');
 				putchar((digit_two / 10) + 48);
 				putchar((digit_two % 10) + 48);
