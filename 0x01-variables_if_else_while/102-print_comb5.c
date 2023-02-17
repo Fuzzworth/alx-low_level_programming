@@ -15,7 +15,7 @@ int main(void)
 	{
 		for (digit_two = 0; digit_two < 100; digit_two++)
 		{
-			if (digit_one < digit_four)
+			if (digit_one < digit_two)
 			{
 				putchar((digit_one / 10) + 48);
 				putchar((digit_one % 10) + 48);
