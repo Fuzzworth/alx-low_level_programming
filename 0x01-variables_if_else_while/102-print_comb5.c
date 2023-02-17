@@ -10,31 +10,22 @@ int main(void)
 {
 	int digit_one;
 	int digit_two;
-	int digit_three;
-	int digit_four;
 
-	for (digit_one = 48; digit_one < 58; digit_one++)
+	for (digit_one = 0; digit_one < 100; digit_one++)
 	{
-		for (digit_two = 48; digit_two < 58; digit_two++)
-		{
-			for (digit_three = 48; digit_three < 58; digit_three++)
+		for (digit_two = 0; digit_two < 100; digit_two++)
+		{			
+			if (digit_one < digit_four)
 			{
-				for (digit_four  = 48; digit_four < 58; digit_four++)
+				putchar((digit_one / 10) + 48);
+				putchar((digit_one % 10) + 48;
+				putchar(' ');
+				putchar((digit_two / 10) + 48);
+				putchar((digit_two % 10) + 48);
+				if (digit_one != 98 || digit_two != 99)
 				{
-					if (((digit_one + digit_three) != (digit_two + digit_four)))
-					{
-						putchar(digit_one);
-						putchar(digit_two);
-						putchar(' ');
-						putchar(digit_three);
-						putchar(digit_four);
-						if ((digit_one + digit_two + digit_three
-									+ digit_four) != 227)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
