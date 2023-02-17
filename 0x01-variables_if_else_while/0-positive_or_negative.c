@@ -4,6 +4,10 @@
 #include <stdio.h>
 /*
 * main: - Program generates a random numbers
+*
+* Description: Program generates a random number and 
+* and prints it as well as its designation as positive,
+* negative or zero.
 */
 int main(void)
 {
