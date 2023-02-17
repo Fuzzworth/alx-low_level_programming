@@ -3,7 +3,7 @@
 * main - Program prints the hex characters
 *
 * Description: Program prints hex characters of the aplphabet
-* then finally a new line using only and a for loop to iterate over 
+* then finally a new line using only and a for loop to iterate over
 * the ascii alphabet
 *
 * Return: 0 if execution has no errors
