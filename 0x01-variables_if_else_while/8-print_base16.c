@@ -17,7 +17,7 @@ int main(void)
 		putchar(alphabet);
 	}
 	/* print uppercase characters */
-	for (alphabet = 65; alphabet < 103; alphabet++)
+	for (alphabet = 97; alphabet < 103; alphabet++)
 	{
 		putchar(alphabet);
 	}
