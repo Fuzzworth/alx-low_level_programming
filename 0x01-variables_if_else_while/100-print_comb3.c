@@ -18,18 +18,15 @@ int main(void)
 			if (character_one < character_two)
 			{
 				putchar(character_one);
-				putchar(character_two);	
+				putchar(character_two);
 				if (character_one != 56 & character_two != 57)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-
-		}
-		
+		}	
 	}
-	
 	putchar('\n');
 	return (0);
 }
