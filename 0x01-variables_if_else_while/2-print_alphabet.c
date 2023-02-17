@@ -9,7 +9,7 @@
 */
 int main(void)
 {
-	for (int alphabet = 97; alphabet < 123; alphabet++)
+	for (char alphabet = 97; alphabet < 123; alphabet++)
 	{
 		printf("%s", alphabet);
 	}
