@@ -8,18 +8,18 @@
 */
 int main(void)
 {
-	int character_one;
-	int character_two;
+	int digit_one;
+	int digit_two;
 
-	for (character_one = 48; character_one < 58; character_one++)
+	for (digit_one = 48; digit_one < 58; digit_one++)
 	{
-		for (character_two = 49; character_two < 58; character_two++)
+		for (digit_two = 49; digit_two < 58; digit_two++)
 		{
-			if (character_one < character_two)
+			if (digit_one < digit_two)
 			{
-				putchar(character_one);
-				putchar(character_two);
-				if ((character_one + character_two) != 113)
+				putchar(digit_one);
+				putchar(digit_two);
+				if ((digit_one + digit_two) != 113)
 				{
 					putchar(',');
 					putchar(' ');
