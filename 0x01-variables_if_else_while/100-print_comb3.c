@@ -19,7 +19,7 @@ int main(void)
 			{
 				putchar(character_one);
 				putchar(character_two);
-				if (character_one != 56 & character_two != 57)
+				if ((character_one + character_two) != 113)
 				{
 					putchar(',');
 					putchar(' ');
