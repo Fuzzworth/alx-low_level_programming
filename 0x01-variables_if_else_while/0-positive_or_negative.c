@@ -5,7 +5,7 @@
 /*
 * main: - Program generates a random numbers
 *
-* Description: Program generates a random number and 
+* Description: Program generates a random number
 * and prints it as well as its designation as positive,
 * negative or zero.
 */
