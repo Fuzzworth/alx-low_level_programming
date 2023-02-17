@@ -2,7 +2,7 @@
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
-/*
+/**
 * main: - Program generates a random numbers
 *
 * Description: Program generates a random number
