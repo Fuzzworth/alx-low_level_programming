@@ -2,9 +2,8 @@
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
-/**
-* main: - Program generates a random number and outputs the number and its designation 
-* Description: Generates a random number the outputs wheter or not it is positive or negative
+/*
+*main: -Program generates a random number and outputs the number and its designation 
 */
 int main(void)
 {
