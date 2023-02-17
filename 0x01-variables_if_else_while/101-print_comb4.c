@@ -10,20 +10,25 @@ int main(void)
 {
 	int digit_one;
 	int digit_two;
+	int digit_three;
 
 	for (digit_one = 48; digit_one < 58; digit_one++)
 	{
 		for (digit_two = 49; digit_two < 58; digit_two++)
 		{
-			if (digit_one < digit_two)
+			for (digit_three = 50; digit_three < 58; digit_three++)
 			{
-				putchar(digit_one);
-				putchar(digit_two);
-				if ((digit_one + digit_two) != 113)
+				if (digit_one < digit_two)
 				{
-					putchar(',');
-					putchar(' ');
-				}
+					putchar(digit_one);
+					putchar(digit_two);
+					putchar(digit_three);
+					if ((digit_one + digit_two + digit_three) != 168)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}	
 			}
 		}
 	}
