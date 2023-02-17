@@ -18,7 +18,7 @@ int main(void)
 		{
 			for (digit_three = 50; digit_three < 58; digit_three++)
 			{
-				if (digit_one < digit_two && digit_one < digit_three)
+				if (digit_one < digit_two && digit_one < digit_three && digit_two < digit_three)
 				{
 					putchar(digit_one);
 					putchar(digit_two);
