@@ -32,7 +32,8 @@ int main(void)
 						putchar(' ');
 						putchar(digit_three);
 						putchar(digit_four);
-						if ((digit_one + digit_two + digit_three + digit_four) != 228)
+						if ((digit_one + digit_two + digit_three 
+									+ digit_four) != 228)
 						{
 							putchar(',');
 							putchar(' ');
