@@ -9,9 +9,9 @@
 */
 int main(void)
 {
-	for (char alphabet = 97; alphabet < 123; alphabet++)
+	for (int alphabet = 97; alphabet < 123; alphabet++)
 	{
-		printf("%s", alphabet);
+		printf("%d", alphabet);
 	}
 
 	printf("\n");
