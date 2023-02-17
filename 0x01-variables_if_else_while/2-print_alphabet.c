@@ -11,7 +11,7 @@ int main(void)
 {
 	for (int alphabet = 97; alphabet < 123; alphabet++)
 	{
-		printf("%d", alphabet);
+		printf("%s", alphabet);
 	}
 
 	printf("\n");
