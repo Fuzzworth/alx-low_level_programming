@@ -28,5 +28,5 @@ int print_last_digit(int n)
 
 	_putchar(ascii_code);
 
-	return (ascii_code);
+	return (last_digit);
 }
