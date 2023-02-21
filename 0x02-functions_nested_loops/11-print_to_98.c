@@ -12,9 +12,7 @@ void print_to_98(int n)
 	int arr[100];
     	int i;
 	int temp_n;
-	int j;
-	int result;
-	
+	int i,j,r;	
 	while (true)
 	{
 		temp_n = n;
