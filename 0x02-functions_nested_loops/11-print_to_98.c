@@ -12,7 +12,7 @@
 void print_to_98(int n)
 {
 	int arr[100];
-	int temp_n, i, j, r;
+	int temp_n, i, j, r, s;
 
 	while (1)
 	{
@@ -26,6 +26,11 @@ void print_to_98(int n)
 		}
 		if (n != 0)
 		{
+			if (temp_n < 0)
+			{
+				temp_n = -temp_n;
+				s = 1;
+			}
 			while (temp_n != 0)
 			{
 				r = temp_n % 10;
@@ -36,6 +41,8 @@ void print_to_98(int n)
 
 			for (j = i - 1; j > -1; j--)
 			{
+				if (s)
+				_putchar('-');
 				_putchar(arr[j] + 48);
 			}
 		}
