@@ -24,19 +24,25 @@ void print_to_98(int n)
 			_putchar(56);
 			break;
 		}
-		while (temp_n != 0)
+		if (n != 0 )
 		{
-			r = temp_n % 10;
-			arr[i] = r;
-			i++;
-			temp_n = temp_n / 10;
-		}
+			while (temp_n != 0)
+			{
+				r = temp_n % 10;
+				arr[i] = r;
+				i++;
+				temp_n = temp_n / 10;
+			}
 
-		for (j = i - 1; j > -1; j--)
+			for (j = i - 1; j > -1; j--)
+			{
+				_putchar(arr[j] + 48);
+			}
+		}
+		else
 		{
-			_putchar(arr[j] + 48);
+			_putchar('0');
 		}
-
 		_putchar(',');
 		_putchar(' ');
 
