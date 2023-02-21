@@ -24,7 +24,7 @@ void print_to_98(int n)
 			_putchar(56);
 			break;
 		}
-		if (n != 0 )
+		if (n != 0)
 		{
 			while (temp_n != 0)
 			{
