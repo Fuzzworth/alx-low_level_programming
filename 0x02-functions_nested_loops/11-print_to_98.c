@@ -43,9 +43,9 @@ void print_to_98(int n)
 			_putchar('0');
 		if (n < 98)
 			n++;
-		if (n > 98)
+		else if (n > 98)
 			n--;
-		if (n == 98)
+		else (n == 98)
 			break;
 		_putchar(',');
 		_putchar(' ');
