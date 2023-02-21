@@ -13,8 +13,20 @@
 int print_last_digit(int n)
 {
 	int last_digit;
+	int ascii_offset;
+	int ascii_code;
+
+	ascii_offset = 48;
+
+	if (n < 0)
+	{
+		n = -n;
+	}
 
 	last_digit = n % 10;
-	_putchar(last_digit);
-	return (last_digit);
+	ascii_code = last_digit + ascii_offset;
+
+	_putchar(ascii_code);
+
+	return (ascii_code);
 }
