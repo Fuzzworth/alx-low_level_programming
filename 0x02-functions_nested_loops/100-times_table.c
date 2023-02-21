@@ -13,7 +13,7 @@ void print_times_table(int n)
 {
 	int digit_one, digit_two, answer, last_digit, second_digit, third_digit;
 
-	if (n > 0 && n <= 15)
+	if (n >= 0 && n <= 15)
 	{
 		for (digit_one = 0; digit_one <= n; digit_one++)
 		{
