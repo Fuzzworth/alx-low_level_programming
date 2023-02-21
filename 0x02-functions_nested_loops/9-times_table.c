@@ -49,7 +49,9 @@ void times_table(void)
 			}
 
 			_putchar(last_digit + ascii_offset);
-			_putchar(ascii_comma);
+			
+			if (digit_two != 9)
+				_putchar(ascii_comma);
 		}
 
 		_putchar('\n');
