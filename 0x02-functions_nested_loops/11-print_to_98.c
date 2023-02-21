@@ -38,11 +38,11 @@ void print_to_98(int n)
 				i++;
 				temp_n = temp_n / 10;
 			}
+			if (s)
+				_putchar('-');
 
 			for (j = i - 1; j > -1; j--)
 			{
-				if (s)
-				_putchar('-');
 				_putchar(arr[j] + 48);
 			}
 		}
