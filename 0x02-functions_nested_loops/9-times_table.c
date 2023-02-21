@@ -15,6 +15,8 @@ void times_table(void)
 	int ascii_comma;
 	int ascii_space;
 	int answer;
+	int last_digit;
+	int second_digit;
 
 	ascii_spcae = 21;
 	ascii_comma = 44;
@@ -25,6 +27,8 @@ void times_table(void)
 		for (digit_two = 0; digit_two <= 9; digit_two++)
 		{
 			answer = digit_one * digit_two;
+			last_digit = answer % 10;
+			second_digit = answer / 10;
 
 			if (digit_two == 0)
 			{
@@ -34,11 +38,9 @@ void times_table(void)
 
 			_putchar(ascii_space);
 
-			if ((answer / 10) > 0)
+			if (second_digit > 0)
 			{
-				_putchar(
-					(answer / 10) + ascii_offset
-					);
+				_putchar(second_digit + ascii_offset);
 			}
 			else
 			{
