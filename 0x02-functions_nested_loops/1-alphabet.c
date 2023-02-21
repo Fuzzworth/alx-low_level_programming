@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-* main - Program prints _putchar, followed by a new line.
+* print_alphabet - Program prints the lowercase alphabet
 *
-* Description: Program prints _putchar, followed by a new line.
+* Description: Program prints the lower case alphabet using
+* _puthchar and a for loop over the ascii table character set
 *
-* Return: 0 if execution has no errors
 */
 void print_alphabet(void)
 {
