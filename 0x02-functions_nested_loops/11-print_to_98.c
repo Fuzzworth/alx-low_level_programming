@@ -11,11 +11,12 @@ void print_to_98(int n)
 {
 	int arr[100];
 	int temp_n, i, j, r;
+
 	while (true)
 	{
 		temp_n = n;
 		i = 0;
-		
+
 		if ( n == 98)
 		{
 			_putchar(57);
@@ -23,8 +24,8 @@ void print_to_98(int n)
 			break;
 		}
 
-    		while (temp_n != 0) {
-
+    		while (temp_n != 0)
+		{
         		result = temp_n % 10;
 			arr[i] = result;
         		i++;
@@ -38,8 +39,8 @@ void print_to_98(int n)
 
 		_putchar(',');
 		_putchar(' ');
-		_putchar('\n');	
-		
+		_putchar('\n');
+
 		if (n < 98)
 		{
 			n++;
