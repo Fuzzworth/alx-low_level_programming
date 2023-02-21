@@ -11,14 +11,9 @@ void times_table(void)
 {
 	int digit_one;
 	int digit_two;
-	int ascii_offset;
-	int ascii_comma;
 	int answer;
 	int last_digit;
 	int second_digit;
-
-	ascii_comma = 44;
-	ascii_offset = 48;
 
 	for (digit_one = 0; digit_one <= 9; digit_one++)
 	{
@@ -30,24 +25,24 @@ void times_table(void)
 
 			if (digit_two == 0)
 			{
-				_putchar(answer + ascii_offset);
-				_putchar(ascii_comma);
+				_putchar(answer + 48);
+				_putchar(44);
 				continue;
 			}
 			_putchar(' ');
 			if (second_digit > 0)
 			{
-				_putchar(second_digit + ascii_offset);
+				_putchar(second_digit + 48);
 			}
 			else
 			{
 				_putchar(' ');
 			}
 
-			_putchar(last_digit + ascii_offset);
+			_putchar(last_digit + 48);
 
 			if (digit_two != 9)
-				_putchar(ascii_comma);
+				_putchar(44);
 		}
 
 		_putchar('\n');
