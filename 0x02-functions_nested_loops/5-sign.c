@@ -21,7 +21,7 @@ int print_sign(int n)
 	ascii_negative = 45;
 	ascii_zero = 48;
 
-	if ( n == 0 )
+	if (n == 0)
 	{
 		_puthchar(ascii_zero);
 		result = 0;
