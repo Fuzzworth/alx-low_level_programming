@@ -22,6 +22,10 @@ void jack_bauer(void)
 	{
 		for (h_two = 48; h_two <= 57; h_two++)
 		{
+			if (h_one == 50 && h_two > 51)
+			{
+				break;
+			}
 			for (m_one = 48; m_one <= 53; m_one++)
 			{
 				for (m_two = 48; m_two <= 57; m_two++)
