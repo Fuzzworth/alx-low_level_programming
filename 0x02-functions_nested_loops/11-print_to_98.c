@@ -28,7 +28,7 @@ void print_to_98(int n)
 			arr[i] = result;
 			i++;
 			temp_n = temp_n / 10;
-    		}
+		}
 
 		for (j = i - i; j > -1; j--)
 		{
