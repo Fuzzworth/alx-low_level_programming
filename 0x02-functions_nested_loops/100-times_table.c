@@ -26,6 +26,7 @@ void print_times_table(int n)
 				if (digit_two == 0)
 				{
 					_putchar(answer + 48);
+					_putchar(44);
 					continue;
 				}
 				_putchar(' ');
