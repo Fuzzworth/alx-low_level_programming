@@ -39,7 +39,7 @@ void print_times_table(int n)
 				else
 					_putchar(' ');
 				_putchar(last_digit + 48);
-				if (digit_two != 9)
+				if (digit_two != n)
 					_putchar(44);
 			}
 			_putchar('\n');
