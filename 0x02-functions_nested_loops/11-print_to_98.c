@@ -30,7 +30,7 @@ void print_to_98(int n)
 			temp_n = temp_n / 10;
 		}
 
-		for (j = i - i; j > -1; j--)
+		for (j = i - 1; j > -1; j--)
 		{
 			_putchar(arr[j] + 48);
 		}
