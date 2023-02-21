@@ -3,7 +3,7 @@
 * print_alphabet - Program prints the lowercase alphabet 10 times
 *
 * Description: Program prints the lower case alphabet 10 times using
-*  the _putchar function and an nested for loop and the ascii table 
+*  the _putchar function and an nested for loop and the ascii table
 *  character
 *
 */
