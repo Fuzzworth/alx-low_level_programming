@@ -23,7 +23,7 @@ int print_sign(int n)
 
 	if (n == 0)
 	{
-		_puthchar(ascii_zero);
+		_putchar(ascii_zero);
 		result = 0;
 	}
 	else if (n > 0)
