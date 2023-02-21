@@ -47,7 +47,7 @@ void times_table(void)
 				_putchar(ascii_space);
 			}
 
-			_putchar((answer % 10) + ascii_offset);
+			_putchar(last_digit + ascii_offset);
 			_putchar(ascii_comma);
 		}
 
