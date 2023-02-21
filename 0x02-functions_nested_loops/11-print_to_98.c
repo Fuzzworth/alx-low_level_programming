@@ -6,6 +6,8 @@
 *  the _putchar function and an nested for loop and the ascii table
 *  character
 *
+*  @n: integer to start from
+*
 */
 void print_to_98(int n)
 {
