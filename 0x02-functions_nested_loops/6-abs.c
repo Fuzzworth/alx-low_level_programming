@@ -5,12 +5,19 @@
 * Description: Program prints the lower case alphabet using
 * _puthchar and a for loop over the ascii table character set
 *
-* @c: ASCII equivalent integer
+* @n: ASCII equivalent integer
 *
 * Return: 1 if lowercase and 0 otherwise
 *
 */
-int _abs(int c)
+int _abs(int n)
 {
-	return (c >= 97 && c <= 122);
+	if (n > 0)
+	{
+		return (n);
+	}
+	else
+	{
+		return (-n);
+	}
 }
