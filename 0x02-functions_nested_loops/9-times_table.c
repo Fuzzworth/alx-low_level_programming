@@ -49,7 +49,7 @@ void times_table(void)
 			}
 
 			_putchar(last_digit + ascii_offset);
-			
+
 			if (digit_two != 9)
 				_putchar(ascii_comma);
 		}
