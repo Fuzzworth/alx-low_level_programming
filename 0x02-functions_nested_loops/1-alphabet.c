@@ -6,7 +6,7 @@
 *
 * Return: 0 if execution has no errors
 */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	int ascii_character;
 
