@@ -16,7 +16,6 @@ void print_to_98(int n)
 	{
 		temp_n = n;
 		i = 0;
-		
 		if ( n == 98)
 		{
 			_putchar(57);
