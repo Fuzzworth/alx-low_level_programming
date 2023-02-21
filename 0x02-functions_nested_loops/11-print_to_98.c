@@ -18,12 +18,6 @@ void print_to_98(int n)
 	{
 		temp_n = n;
 		i = s = 0;
-		if (n == 98)
-		{
-			_putchar(57);
-			_putchar(56);
-			break;
-		}
 		if (n != 0)
 		{
 			if (temp_n < 0)
@@ -50,17 +44,20 @@ void print_to_98(int n)
 		{
 			_putchar('0');
 		}
-		_putchar(',');
-		_putchar(' ');
-
 		if (n < 98)
 		{
 			n++;
 		}
-		else
+		else if ( n > 98)
 		{
 			n--;
 		}
+		else
+		{
+			break;
+		}
+		_putchar(',');
+		_putchar(' ');
 	}
 	_putchar('\n');
 }
