@@ -35,6 +35,8 @@ void print_times_table(int n)
 				else
 					_putchar(' ');
 				if (second_digit > 0)
+					if (second_digit > 10)
+						second_digit %= 10
 					_putchar(second_digit + 48);
 				else
 					_putchar(' ');
