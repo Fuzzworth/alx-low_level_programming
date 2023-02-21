@@ -22,7 +22,7 @@ void jack_bauer(void)
 	{
 		for (h_two = 48; h_two <= 51; h_two++)
 		{
-			for (m_one = 48; m_one <= 54; m_one++)
+			for (m_one = 48; m_one <= 53; m_one++)
 			{
 				for (m_two = 48; m_two <= 57; m_two++)
 				{
