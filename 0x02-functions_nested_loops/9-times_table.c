@@ -13,12 +13,10 @@ void times_table(void)
 	int digit_two;
 	int ascii_offset;
 	int ascii_comma;
-	int ascii_space;
 	int answer;
 	int last_digit;
 	int second_digit;
 
-	ascii_space = 21;
 	ascii_comma = 44;
 	ascii_offset = 48;
 
@@ -36,16 +34,14 @@ void times_table(void)
 				_putchar(ascii_comma);
 				continue;
 			}
-
-			_putchar(ascii_space);
-
+			_putchar(' ');
 			if (second_digit > 0)
 			{
 				_putchar(second_digit + ascii_offset);
 			}
 			else
 			{
-				_putchar(ascii_space);
+				_putchar(' ');
 			}
 
 			_putchar(last_digit + ascii_offset);
