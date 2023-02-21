@@ -19,13 +19,13 @@ int print_last_digit(int n)
 	ascii_offset = 48;
 
 	last_digit = n % 10;
-	ascii_code = last_digit + ascii_offset;
 
 	if (last_digit < 0)
 	{
 		last_digit = -last_digit;
 	}
 
+	ascii_code = last_digit + ascii_offset;
 	_putchar(ascii_code);
 
 	return (last_digit);
