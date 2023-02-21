@@ -22,8 +22,8 @@ void print_to_98(int n)
 			_putchar(56);
 			break;
 		}
-
-    		while (temp_n != 0)
+		
+		while (temp_n != 0)
 		{
         		result = temp_n % 10;
 			arr[i] = result;
