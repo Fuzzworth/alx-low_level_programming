@@ -18,7 +18,7 @@ void times_table(void)
 	int last_digit;
 	int second_digit;
 
-	ascii_spcae = 21;
+	ascii_space = 21;
 	ascii_comma = 44;
 	ascii_offset = 48;
 
