@@ -18,13 +18,13 @@ int print_last_digit(int n)
 
 	ascii_offset = 48;
 
-	if (n < 0)
-	{
-		n = -n;
-	}
-
 	last_digit = n % 10;
 	ascii_code = last_digit + ascii_offset;
+
+	if (last_digit < 0)
+	{
+		last_digit = -last_digit;
+	}
 
 	_putchar(ascii_code);
 
