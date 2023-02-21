@@ -36,7 +36,9 @@ void times_table(void)
 
 			if ((answer / 10) > 0)
 			{
-				_putchar((answer / 10) + ascii_offset);
+				_putchar(
+					(answer / 10) + ascii_offset
+					);
 			}
 			else
 			{
