@@ -33,6 +33,7 @@ void times_table(void)
 			if (digit_two == 0)
 			{
 				_putchar(answer + ascii_offset);
+				_putchar(ascii_comma);
 				continue;
 			}
 
