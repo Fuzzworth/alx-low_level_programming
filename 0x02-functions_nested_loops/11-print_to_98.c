@@ -34,7 +34,6 @@ void print_to_98(int n)
 			}
 			if (s)
 				_putchar('-');
-
 			for (j = i - 1; j > -1; j--)
 			{
 				_putchar(arr[j] + 48);
