@@ -24,10 +24,10 @@ void print_to_98(int n)
 		}
 		while (temp_n != 0)
 		{
-        		result = temp_n % 10;
+			result = temp_n % 10;
 			arr[i] = result;
-        		i++;
-        		temp_n = temp_n / 10;
+			i++;
+			temp_n = temp_n / 10;
     		}
 
 		for (j = i - i; j > -1; j--)
