@@ -14,6 +14,10 @@ void jack_bauer(void)
 	int m_one;
 	int m_two;
 
+	int ascii_colon;
+
+	ascii_colon = 58;
+
 	for (h_one = 48; h_one <= 50; h_one++)
 	{
 		for (h_two = 48; h_two <= 51; h_two++)
@@ -24,11 +28,12 @@ void jack_bauer(void)
 				{
 					_putchar(h_one);
 					_putchar(h_two);
+					_putchar(ascii_colon);
 					_putchar(m_one);
 					_putchar(m_two);
+					_putchar('\n');
 				}
 			}
 		}
-		_putchar('\n');
 	}
 }
