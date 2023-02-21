@@ -24,8 +24,8 @@ void print_to_98(int n)
 		}
 		while (temp_n != 0)
 		{
-			result = temp_n % 10;
-			arr[i] = result;
+			r = temp_n % 10;
+			arr[i] = r;
 			i++;
 			temp_n = temp_n / 10;
 		}
