@@ -15,11 +15,11 @@ int main(void)
 	t2 = 2;
 	nextTerm = t1 + t2;
 
-	printf("%ld, %ld", t1, t2);
+	printf("%li, %li", t1, t2);
 
 	for (i = 3; i <= 98; ++i)
 	{
-		printf(", %ld", nextTerm);
+		printf(", %li", nextTerm);
 		t1 = t2;
 		t2 = nextTerm;
 		nextTerm = t1 + t2;
