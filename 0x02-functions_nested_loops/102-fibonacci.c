@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i;
-	long t1, t2, nextTerm;
+	unsigned int t1, t2, nextTerm;
 
 	t1 = 0;
 	t2 = 1;
