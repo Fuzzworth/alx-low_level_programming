@@ -18,7 +18,7 @@ int main(void)
 
 	for (i = 3; i <= 50; ++i)
 	{
-		if (nextTerm % 2 == 0)
+		if (t1 % 2 == 0 && t2 % 2 == 0)
 			sum += nextTerm;
 		t1 = t2;
 		t2 = nextTerm;
