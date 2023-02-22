@@ -12,7 +12,7 @@ int main(void)
 	unsigned long t1, t2, nextTerm;
 	unsigned long t1_h1, t1_h2, t2_h1, t2_h2;
 	unsigned long h1, h2;
-	
+
 	t1 = 1;
 	t2 = 2;
 	nextTerm = t1 + t2;
