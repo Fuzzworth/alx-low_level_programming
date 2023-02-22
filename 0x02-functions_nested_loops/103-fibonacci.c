@@ -8,7 +8,6 @@
 */
 int main(void)
 {
-	int i;
 	unsigned long t1, t2, nextTerm, sum;
 
 	t1 = 1;
