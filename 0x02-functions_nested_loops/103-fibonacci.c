@@ -23,6 +23,6 @@ int main(void)
 		t2 = nextTerm;
 		nextTerm = t1 + t2;
 	}
-	printf("%lu\n",sum);
+	printf("%lu\n", sum);
 	return (0);
 }
