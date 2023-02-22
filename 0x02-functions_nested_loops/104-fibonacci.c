@@ -10,7 +10,7 @@
 int main(void)
 {
 	int i;
-	int64_t t1, t2, nextTerm;
+	uint64_t t1, t2, nextTerm;
 
 	t1 = 1;
 	t2 = 2;
