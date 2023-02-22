@@ -14,11 +14,11 @@ int main(void)
 	t1 = 1;
 	t2 = 2;
 	nextTerm = t1 + t2;
-	sum = 3;
+	sum = 2;
 
-	for (i = 3; i <= 50; ++i)
+	while (nextTerm <= 4000000)
 	{
-		if (t1 % 2 == 0 && t2 % 2 == 0)
+		if (nextTerm % 2 == 0)
 			sum += nextTerm;
 		t1 = t2;
 		t2 = nextTerm;
