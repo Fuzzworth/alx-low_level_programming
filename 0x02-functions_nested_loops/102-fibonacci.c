@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-	int i; 
+	int i;
 	long t1, t2, nextTerm;
 
 	t1 = 0;
