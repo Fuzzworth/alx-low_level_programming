@@ -9,17 +9,17 @@
 int main(void)
 {
 	int i;
-	unsigned int t1, t2, nextTerm;
+	unsigned long t1, t2, nextTerm;
 
 	t1 = 0;
 	t2 = 1;
 	nextTerm = t1 + t2;
 
-	printf("%d, %d", t1, t2);
+	printf("%lu, %lu", t1, t2);
 
 	for (i = 3; i <= 50; ++i)
 	{
-		printf(", %d", nextTerm);
+		printf(", %lu", nextTerm);
 		t1 = t2;
 		t2 = nextTerm;
 		nextTerm = t1 + t2;
