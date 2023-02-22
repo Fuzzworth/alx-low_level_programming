@@ -11,8 +11,8 @@ int main(void)
 	int i;
 	unsigned long t1, t2, nextTerm;
 
-	t1 = 0;
-	t2 = 1;
+	t1 = 1;
+	t2 = 2;
 	nextTerm = t1 + t2;
 
 	printf("%lu, %lu", t1, t2);
