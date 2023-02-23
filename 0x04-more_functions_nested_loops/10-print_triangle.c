@@ -20,7 +20,14 @@ void print_triangle(int n)
 		{
 			for (index_two = 0; index_two < index_one; index_two++)
 			{
-				_putchar('#');
+				if (index_two - index_one > 0)
+				{
+					_putchar('#');
+				}
+				else
+				{
+					_putchar(' ');
+				}
 			}
 			_putchar('\n');
 		}
