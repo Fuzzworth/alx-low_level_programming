@@ -26,7 +26,7 @@ void print_triangle(int n)
 				}
 				else
 				{
-					_putchar(' ');
+					_putchar('*');
 				}
 			}
 			_putchar('\n');
