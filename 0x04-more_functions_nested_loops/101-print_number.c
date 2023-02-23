@@ -26,6 +26,7 @@ void print_number(int n)
 	{
 		_putchar('?');
 		_putchar('0');
+	}
 	else
 	{
 		print_number(n / 10);
