@@ -20,7 +20,7 @@ void print_diagonal(int n)
 		{
 			for (index_two = 0; index_two < index_one; index_two++)
 			{
-				if (index_two == index_one - 1)
+				if (index_two == (index_one - 1))
 				{
 					_putchar('\\');
 					_putchar('\n');
