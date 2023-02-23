@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - The “Fizz-Buzz test” 
+ * main - The “Fizz-Buzz test”
  *
  * Description: The “Fizz-Buzz test” is an interview question designed
  * to help filter out the 99.5% of programming job candidates who can’t
@@ -25,13 +25,13 @@ int main(void)
 	{
 		if (index % 3 == 0)
 			printf("Fizz");
-		
+
 		if (index % 5 == 0)
 			printf("Buzz");
-		
+
 		if (index % 3 != 0 && index % 5 != 0)
 			printf("%d", index);
-		
+
 		if (index != 100)
 		{
 			printf(" ");
