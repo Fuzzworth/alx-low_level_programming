@@ -23,6 +23,7 @@ void print_diagonal(int n)
 				if (index_two == index_one - 1)
 				{
 					_putchar('\\');
+					_putchar('\n');
 					break;
 				}
 				_putchar(' ');
