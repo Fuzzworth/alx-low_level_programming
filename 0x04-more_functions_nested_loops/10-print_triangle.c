@@ -18,7 +18,7 @@ void print_triangle(int n)
 	{
 		for (index_one = 0; index_one <= n; index_one++)
 		{
-			for (index_two = 0; index_two < index_one; index_two++)
+			for (index_two = 0; index_two <= n; index_two++)
 			{
 				if ((index_two + index_one) > n)
 				{
