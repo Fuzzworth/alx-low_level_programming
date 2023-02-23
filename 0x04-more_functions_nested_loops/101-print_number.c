@@ -12,7 +12,6 @@
 
 void print_number(int n)
 {
-	int sign;
 
 	if (n < 10 && n > 0)
 	{
@@ -21,8 +20,12 @@ void print_number(int n)
 	else if (n > -10 && n < 0)
 	{
 		_putchar('-');
-		_puthchar(-n + '0');
+		_puthhar(-n + '0');
 	}
+	else if (n == 0)
+	{
+		_putchar('?');
+		_putchar('0');
 	else
 	{
 		print_number(n / 10);
