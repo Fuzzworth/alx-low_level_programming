@@ -22,11 +22,11 @@ void print_triangle(int n)
 			{
 				if (index_two < index_one)
 				{
-					_putchar(' ');
+					_putchar('#');
 				}
 				else
 				{
-					_putchar('#');
+					_putchar(' ');
 				}
 			}
 			_putchar('\n');
