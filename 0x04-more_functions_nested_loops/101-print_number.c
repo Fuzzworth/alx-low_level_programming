@@ -12,32 +12,23 @@
 
 void print_number(int n)
 {
-	if (n < 10 && n > 0)
+	unsigned int absolute_n;
+
+	if (n < 0)
 	{
-		_putchar(n + 48);
-	}
-	else if (n > -10 && n < 0)
-	{
+		absolute_n = -n;
 		_putchar(45);
-		_putchar(-n + 48);
 	}
-	else if (n == +0)
+	else
 	{
+		absolute_n = -n;
 		_putchar(48);
 	}
-	else if (n == -0)
+
+	if (absolute_n / 10)
 	{
-		_putchar(45);
-		_putchar(48);
+		print_number(absolute_n / 10);
 	}
-	else if (n < 0)
-	{
-		print_number(n / 10);
-		_putchar(((-n) % 10) + 48);
-	}
-	else if (n > 0)
-	{
-		print_number(n / 10);
-		_putchar((n % 10) + 48);
-	}
+
+	_putchar((absolute_n % 10) + 48);
 }
