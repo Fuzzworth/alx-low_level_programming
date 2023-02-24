@@ -23,15 +23,12 @@ int main(void)
 		{
 			isprime = 1;
 
-			while (is_prime)
+			for (index2 = 2; index2 < index; index2++)
 			{
-				for (index2 = 2; index2 < index; index2++)
+				if (index % index2 == 0)
 				{
-					if (index % index2 == 0)
-					{
-						isprime = 0;
-						break;
-					}
+					isprime = 0;
+					break;
 				}
 			}
 
@@ -41,6 +38,8 @@ int main(void)
 		}
 
 	}
+	
+	printf("%d\n", max);
 
 	return (0);
 }
