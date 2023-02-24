@@ -22,7 +22,6 @@ void print_number(int n)
 	else
 	{
 		absolute_n = n;
-		_putchar(48);
 	}
 
 	if (absolute_n / 10)
