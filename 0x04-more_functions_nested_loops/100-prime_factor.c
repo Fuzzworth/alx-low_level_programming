@@ -21,7 +21,7 @@ int main(void)
 	{
 		if (number % index == 0)
 		{
-			isprime = 1;
+			is_prime = 1;
 
 			for (index2 = 2; index2 < index; index2++)
 			{
