@@ -16,17 +16,17 @@ int main(void)
 
 	number = 612852475143;
 	max = 1;
-	temp = 0;
 
-	for(index = 2; index < number; index++)
+	for (index = 2; index < number; index++)
 	{
 		if (number % index == 0)
 		{
-			isprime =1;
+			isprime = 1;
 
-			while(is_prime)
+			while (is_prime)
 			{
-				for (index2 = 2; index2 < index; index2++){
+				for (index2 = 2; index2 < index; index2++)
+				{
 					if (index % index2 == 0)
 					{
 						isprime = 0;
@@ -40,6 +40,7 @@ int main(void)
 
 		}
 
-	}	
+	}
+
 	return (0);
 }
