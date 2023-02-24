@@ -21,7 +21,7 @@ void print_number(int n)
 	}
 	else
 	{
-		absolute_n = -n;
+		absolute_n = n;
 		_putchar(48);
 	}
 
