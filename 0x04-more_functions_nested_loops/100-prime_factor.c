@@ -11,35 +11,28 @@
 
 int main(void)
 {
-	unsigned long index, index2, number, max;
-	int is_prime;
+	unsigned long number, maxPrime, oodPrime;
 
 	number = 612852475143;
-	max = 1;
+	maxPrime = 0;
+	oddPrime = 3;
 
-	for (index = 2; index < number; index++)
+	while (num % 2 == 0)
 	{
-		if (number % index == 0)
+		maxPrime = 2;
+		number /= 2;
+	}
+	while (number != 1)
+	{
+		while (number % oddPrime == 0)
 		{
-			is_prime = 1;
-
-			for (index2 = 2; index2 < index; index2++)
-			{
-				if (index % index2 == 0)
-				{
-					is_prime = 0;
-					break;
-				}
-			}
-
-			if (is_prime)
-				max = index;
-
+			maxPrime = oddPrime;
+			number /= oddPrime;
 		}
-
+		oddPrime +- 2;
 	}
 
-	printf("%lu\n", max);
+	printf("%lu\n", maxPrime);
 
 	return (0);
 }
