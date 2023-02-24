@@ -17,7 +17,7 @@ int main(void)
 	maxPrime = 0;
 	oddPrime = 3;
 
-	while (num % 2 == 0)
+	while (number % 2 == 0)
 	{
 		maxPrime = 2;
 		number /= 2;
