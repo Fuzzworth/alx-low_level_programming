@@ -27,7 +27,7 @@ int main(void)
 			{
 				if (index % index2 == 0)
 				{
-					isprime = 0;
+					is_prime = 0;
 					break;
 				}
 			}
