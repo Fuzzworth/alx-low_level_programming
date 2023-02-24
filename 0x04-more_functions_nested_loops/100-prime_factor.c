@@ -29,7 +29,7 @@ int main(void)
 			maxPrime = oddPrime;
 			number /= oddPrime;
 		}
-		oddPrime +- 2;
+		oddPrime += 2;
 	}
 
 	printf("%lu\n", maxPrime);
