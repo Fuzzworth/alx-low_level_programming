@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	unsigned long long index, index2, number, max;
+	long long index, index2, number, max;
 	int is_prime;
 
 	number = 612852475143;
