@@ -39,7 +39,7 @@ int main(void)
 
 	}
 
-	printf("%d\n", max);
+	printf("%lu\n", max);
 
 	return (0);
 }
