@@ -21,8 +21,13 @@ void print_number(int n)
 		_putchar(45);
 		_putchar(-n + 48);
 	}
-	else if (n == 0)
+	else if (n == +0)
 	{
+		_putchar(48);
+	}
+	else if (n == -0)
+	{
+		_putchar(45);
 		_putchar(48);
 	}
 	else if (n < 0)
