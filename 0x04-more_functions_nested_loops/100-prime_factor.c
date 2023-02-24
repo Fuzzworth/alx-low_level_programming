@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	unsigned long number, maxPrime, oodPrime;
+	unsigned long number, maxPrime, oddPrime;
 
 	number = 612852475143;
 	maxPrime = 0;
