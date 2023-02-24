@@ -11,14 +11,34 @@
 
 int main(void)
 {
-	unsigned long index, number, max, temp;
+	unsigned long long index, index2 number, max;
+	int is_prime;
 
 	number = 612852475143;
-	max = 0;
+	max = 1;
+	temp = 0;
 
-	for(index = 1; index <= number; index++)
+	for(index = 2; index < number; index++)
 	{
-		if (index % number == 0)
+		if (number % index == 0)
+		{
+			isprime =1;
+
+			while(is_prime)
+			{
+				for (index2 = 2; index2 < index; index2++){
+					if (index % index2 == 0)
+					{
+						isprime = 0;
+						break;
+					}
+				}
+			}
+
+			if (is_prime)
+				max = index;
+
+		}
 
 	}	
 	return (0);
