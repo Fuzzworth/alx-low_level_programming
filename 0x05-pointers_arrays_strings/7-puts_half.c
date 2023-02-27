@@ -5,7 +5,7 @@
  *
  * Description: function that prints half of a string, followed by a new line
  *
- * @s: String pointer
+ * @str: String pointer
  *
  * Return: void
  */
