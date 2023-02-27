@@ -19,14 +19,7 @@ void print_rev(char *s)
 
 	for (index_one = 0; *(s + index_one) != '\0'; index_one++)
 	{
-		if (*(s + index_one) != '\0')
-		{
 			length++;
-		}
-		else
-		{
-			break;
-		}
 	}
 
 	for (index_two = length; index_two >= 0; index_two--)
