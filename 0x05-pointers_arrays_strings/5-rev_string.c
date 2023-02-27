@@ -22,7 +22,7 @@ void rev_string(char *s)
 		length++;
 	}
 
-	if (length % 2 == 0)
+	if (length % 2 != 0)
 	{
 		for (index_two = (length - 1); index_two > (length / 2); index_two--)
 		{
