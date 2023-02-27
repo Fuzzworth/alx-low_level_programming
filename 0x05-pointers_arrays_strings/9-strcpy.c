@@ -24,6 +24,8 @@ char *_strcpy(char *dest, char *src)
 		length++;
 	}
 
+	*(dest + length) = '\0';
+
 	for (index_two = 0; index_two < length; index_two++)
 	{
 		temp = *(src + index_two);
