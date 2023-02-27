@@ -13,8 +13,9 @@
 
 int _atoi(char *s)
 {
-	int index, sign, first_digit, last_digit, power, number, exp;
+	int index, sign, first_digit, last_digit, power, exp;
 	int index_two;
+	unsigned int number;
 	char temp;
 
 	sign = 1;
@@ -51,6 +52,9 @@ int _atoi(char *s)
 			break;
 		index++;
 	}
+
+	if (first_digit == -1)
+		return (0)
 
 	power = last_digit - first_digit;
 
