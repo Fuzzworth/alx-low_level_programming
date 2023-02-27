@@ -20,7 +20,7 @@ int main(void)
 	srand(seconds);
 	password_length = (rand() % 130) + 20;
 
-	for ( index = 0; index <= password_length; index++)
+	for (index = 0; index <= password_length; index++)
 	{
 		printf("%c\n", (rand() % 93) + 34);
 	}
