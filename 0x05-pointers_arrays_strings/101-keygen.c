@@ -13,11 +13,17 @@
 
 int main(void)
 {
+	int password_length, index;
 	time_t seconds;
 
 	seconds = time(NULL);
-	/* Intializes random number generator */
 	srand(seconds);
-	printf("%c\n", (rand() % 93) + 34);
+	password_length = (rand() % 130) + 20;
+
+	for ( index = 0; index <= password_length; index++)
+	{
+		printf("%c\n", (rand() % 93) + 34);
+	}
+
 	return (0);
 }
