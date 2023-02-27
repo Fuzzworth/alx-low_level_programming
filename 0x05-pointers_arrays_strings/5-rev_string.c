@@ -13,7 +13,6 @@
 void rev_string(char *s)
 {
 	int index_one, index_two, length;
-	char *t;
 
 	length = 0;
 
@@ -21,6 +20,9 @@ void rev_string(char *s)
 	{
 		length++;
 	}
+
+	char t[length];
+
 	for (index_two = (length - 1); index_two >= 0; index_two--)
 	{
 		*(t + ((length - 1) - index_two)) = (*(s + index_two));
