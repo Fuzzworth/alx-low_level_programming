@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_half - function that prints half of a string, followed by a new line
+ * puts_half - function that prints half of a string, followed by a new line
  *
  * Description: function that prints half of a string, followed by a new line
  *
@@ -10,7 +10,7 @@
  * Return: void
  */
 
-void print_half(char *str)
+void puts_half(char *str)
 {
 	int index_one, index_two, length;
 
