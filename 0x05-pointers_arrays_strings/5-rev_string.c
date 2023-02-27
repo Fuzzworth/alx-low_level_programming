@@ -24,9 +24,8 @@ void rev_string(char *s)
 	}
 	for (index_two = (length - 1); index_two >= 0; index_two--)
 	{
-		*(t + ((length) - index_two)) = (*(s + index_two));
+		*(t + ((length - 1) - index_two)) = (*(s + index_two));
 	}
 
-	*(t + length) = '\0';
 	*s = *t;
 }
