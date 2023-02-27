@@ -13,6 +13,9 @@
 
 int main(void)
 {
-	printf("%d\n", srand(time(NULL)));
+	time_t seconds;
+
+	seconds = time(NULL);
+	printf("%d\n", srand(seconds));
 	return (0);
 }
