@@ -19,13 +19,19 @@ void print_rev(char *s)
 
 	for (index_one = 0; *(s + index_one) != '\0'; index_one++)
 	{
-		length++;
-		_putchar(*(s + index_one));
+		if (*(s + index_one) != '\0')
+		{
+			length++;
+		}
+		else
+		{
+			break;
+		}
 	}
 
 	_putchar('\n');
 
-	for (index_two = (length - 1); index_two < 0; index_two--)
+	for (index_two = length; index_two < 0; index_two--)
 	{
 		_putchar(*(s + index_two));
 	}
