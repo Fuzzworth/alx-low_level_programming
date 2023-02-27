@@ -65,5 +65,5 @@ int _atoi(char *s)
 		power--;
 	}
 
-	return (number);
+	return (sign * number);
 }
