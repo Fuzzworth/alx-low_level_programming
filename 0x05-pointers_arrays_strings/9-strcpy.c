@@ -29,5 +29,5 @@ char *_strcpy(char *dest, char *src)
 		temp = *(src + index_two);
 		*(dest + index_two) = temp;
 	}
-	return (&dest);
+	return (dest);
 }
