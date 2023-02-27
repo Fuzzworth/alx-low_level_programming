@@ -31,11 +31,11 @@ int _atoi(char *s)
 
 		if (temp == '-')
 		{
-			sign = -1;
+			sign *= -1;
 		}
 		else if (temp == '+')
 		{
-			sign = 1;
+			sign *= 1;
 		}
 
 		if (temp >= '0' && temp <= '9' && first_digit == -1)
