@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _puts - function that prints a string, followed by a new line, to stdout.
+ * _puts - function that prints a string, followed by a new line.
  *
- * Description: function that prints a string, followed by a new line, to stdout.
+ * Description: function that prints a string, followed by a new line, to
+ * stdout
  *
  * @str: String pointer
  *
