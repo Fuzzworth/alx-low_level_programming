@@ -18,7 +18,8 @@ void puts_half(char *str)
 
 	for (index_one = 0; *(str + index_one) != '\0'; index_one++)
 	{
-		length++;
+		if (*(str + index_one) != '\0')
+			length++;
 	}
 	if (length > 0 && length % 2 != 0)
 	{
@@ -27,6 +28,10 @@ void puts_half(char *str)
 	else if (length > 0 && length % 2 == 0)
 	{
 		middle = (length / 2);
+	}
+	else
+	{
+		middle = length;
 	}
 
 	for (index_two = middle; index_two < length; index_two++)
