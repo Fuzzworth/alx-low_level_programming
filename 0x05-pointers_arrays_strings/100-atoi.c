@@ -25,7 +25,7 @@ int _atoi(char *s)
 	number = 0;
 	exp = 1;
 
-	while(1)
+	while (1)
 	{
 		temp = *(s + index);
 
