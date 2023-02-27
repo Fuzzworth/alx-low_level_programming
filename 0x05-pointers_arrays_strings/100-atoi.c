@@ -54,7 +54,7 @@ int _atoi(char *s)
 	}
 
 	if (first_digit == -1)
-		return (0)
+		return (0);
 
 	power = last_digit - first_digit;
 
