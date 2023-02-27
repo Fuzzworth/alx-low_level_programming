@@ -25,6 +25,6 @@ int main(void)
 		printf("%c", (rand() % 93) + 34);
 	}
 
-	printf('\n');
+	printf("\n");
 	return (0);
 }
