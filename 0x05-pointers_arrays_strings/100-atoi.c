@@ -13,18 +13,14 @@
 
 int _atoi(char *s)
 {
-	int index, sign, first_digit, last_digit, power, exp;
-	int index_two;
+	int index, sign, first_digit, last_digit, power, exp, index_two;
 	unsigned int number;
 	char temp;
 
-	sign = 1;
-	index = 0;
-	first_digit = -1;
-	last_digit = -1;
-	power = 0;
+	sign = exp = 1;
+	index = power = 0;
+	first_digit = last_digit = -1;
 	number = 0;
-	exp = 1;
 
 	while (1)
 	{
