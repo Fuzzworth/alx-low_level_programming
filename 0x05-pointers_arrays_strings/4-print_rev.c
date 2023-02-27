@@ -13,18 +13,18 @@
 
 void print_rev(char *s)
 {
-	int index, length;
+	int index_one, index_two, length;
 
 	length = 0;
 
-	for (index = 0; *(s + index) != '\0'; index++)
+	for (index_one = 0; *(s + index_one) != '\0'; index_one++)
 	{
 		length++;
 	}
 
-	for (index = (length - 1); index < 0; index--)
+	for (index_two = (length - 1); index_two < 0; index_two--)
 	{
-		_putchar(*(s + index));
+		_putchar(*(s + index_two));
 	}
 	_putchar('\n');
 }
