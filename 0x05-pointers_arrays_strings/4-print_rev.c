@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -22,7 +23,7 @@ void print_rev(char *s)
 		length++;
 	}
 
-	_putchar(length);
+	printf("Length of string: %d\n", length);
 
 	for (index = length; index < 0; index--)
 	{
