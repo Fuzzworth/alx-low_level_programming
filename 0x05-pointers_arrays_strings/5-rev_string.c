@@ -13,7 +13,7 @@
 void rev_string(char *s)
 {
 	int index_one, index_two, length;
-	char *t;
+	char t[];
 
 	length = 0;
 	t = *s;
