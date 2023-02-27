@@ -31,7 +31,7 @@ int _atoi(char *s)
 
 		if (temp == '-')
 		{
-			sign *= -1;
+			sign = -1;
 		}
 		else if (temp == '+')
 		{
