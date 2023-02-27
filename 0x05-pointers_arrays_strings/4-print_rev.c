@@ -22,6 +22,8 @@ void print_rev(char *s)
 		length++;
 	}
 
+	_putchar(length);
+
 	for (index = length; index < 0; index--)
 	{
 		_putchar(*(s + index));
