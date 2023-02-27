@@ -54,7 +54,7 @@ int _atoi(char *s)
 
 	power = last_digit - first_digit;
 
-	for (index = first_digit; index < last_digit; index++)
+	for (index = first_digit; index <= last_digit; index++)
 	{
 		temp = *(s + index);
 		for (index_two = 0; index_two < power; index_two++)
