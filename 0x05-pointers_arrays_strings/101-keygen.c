@@ -13,6 +13,6 @@
 
 int main(void)
 {
-	printf("%d\n", srand(time()));
+	printf("%d\n", srand(time(NULL)));
 	return (0);
 }
