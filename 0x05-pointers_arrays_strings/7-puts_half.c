@@ -24,7 +24,7 @@ void puts_half(char *str)
 	{
 		middle = (length / 2) - 1;
 	}
-	else
+	else if (length > 0 && length % 2 == 0)
 	{
 		middle = (length / 2);
 	}
