@@ -24,6 +24,7 @@ void print_rev(char *s)
 	}
 
 	printf("Length of string: %d\n", length);
+	_puthchar(*(s + length));
 
 	for (index = length - 1; index < 0; index--)
 	{
