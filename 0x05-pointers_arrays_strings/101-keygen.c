@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
  * main - Password generator
@@ -12,6 +13,6 @@
 
 int main(void)
 {
-	printf("%d\n", srand());
+	printf("%d\n", srand(time()));
 	return (0);
 }
