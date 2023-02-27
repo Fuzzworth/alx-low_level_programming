@@ -16,6 +16,10 @@ int main(void)
 	time_t seconds;
 
 	seconds = time(NULL);
-	printf("%d\n", srand(seconds));
+	
+	/* Intializes random number generator */
+   	srand((unsigned) time(&t));
+	
+	printf("%s\n", (rand() % 93) + 34);
 	return (0);
 }
