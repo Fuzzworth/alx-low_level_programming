@@ -19,7 +19,7 @@ char *_strcpy(char *dest, char *src)
 
 	length = 0;
 
-	for (index_one = 0; *(s + index_one) != '\0'; index_one++)
+	for (index_one = 0; *(src + index_one) != '\0'; index_one++)
 	{
 		length++;
 	}
