@@ -22,10 +22,22 @@ void rev_string(char *s)
 		length++;
 	}
 
-	for (index_two = (length - 1); index_two > (length / 2); index_two--)
+	if (length % 2 == 0)
 	{
-		temp = *(s + index_two);
-		*(s + index_two) = *(s + ((length - 1) - index_two));
-		*(s + ((length - 1) - index_two)) = temp;
+		for (index_two = (length - 1); index_two > (length / 2); index_two--)
+		{
+			temp = *(s + index_two);
+			*(s + index_two) = *(s + ((length - 1) - index_two));
+			*(s + ((length - 1) - index_two)) = temp;
+		}
+	}
+	else
+	{
+		for (index_two = (length - 1); index_two >= (length / 2); index_two--)
+		{
+			temp = *(s + index_two);
+			*(s + index_two) = *(s + ((length - 1) - index_two));
+			*(s + ((length - 1) - index_two)) = temp;
+		}
 	}
 }
