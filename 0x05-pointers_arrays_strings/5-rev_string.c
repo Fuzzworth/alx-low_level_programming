@@ -27,4 +27,5 @@ void rev_string(char *s)
 	}
 
 	*(t + length) = '\0';
+	*s = *t;
 }
