@@ -20,10 +20,9 @@ void print_rev(char *s)
 	for (index = 0; *(s + index) != '\0'; index++)
 	{
 		length++;
-
 	}
 
-	for (index = length; length < 0; index--)
+	for (index = length; index < 0; index--)
 	{
 		_putchar(*(s + index));
 	}
