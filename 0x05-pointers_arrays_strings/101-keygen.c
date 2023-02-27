@@ -22,8 +22,9 @@ int main(void)
 
 	for (index = 0; index <= password_length; index++)
 	{
-		printf("%c\n", (rand() % 93) + 34);
+		printf("%c", (rand() % 93) + 34);
 	}
 
+	printf('\n');
 	return (0);
 }
