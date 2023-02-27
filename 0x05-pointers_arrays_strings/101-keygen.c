@@ -18,6 +18,6 @@ int main(void)
 	seconds = time(NULL);
 	/* Intializes random number generator */
 	srand(seconds);
-	printf("%s\n", (rand() % 93) + 34);
+	printf("%c\n", (rand() % 93) + 34);
 	return (0);
 }
