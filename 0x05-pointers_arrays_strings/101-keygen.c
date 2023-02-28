@@ -18,7 +18,7 @@ int main(void)
 
 	seconds = time(NULL);
 	srand(seconds);
-	password_length = (rand() % 130) + 20;
+	password_length = 100;
 
 	for (index = 0; index <= password_length; index++)
 	{
