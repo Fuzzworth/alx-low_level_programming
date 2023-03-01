@@ -13,7 +13,7 @@
 
 void reverse_array(int *a, int n)
 {
-	int temp, index, middle;
+	int temp, index;
 
 	if (n % 2 != 0)
 	{
