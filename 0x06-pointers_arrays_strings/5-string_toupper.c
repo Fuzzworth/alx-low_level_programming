@@ -19,7 +19,7 @@ char *string_toupper(char *str)
 	while (str[index])
 	{
 		if (str[index] >= 'a' && str[index] <= 'z')
-			s[index] = str[index] - 32;
+			str[index] = str[index] - 32;
 		index++;
 	}
 }
