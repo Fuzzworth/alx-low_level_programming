@@ -48,8 +48,6 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		if (index_src < length_src)
 			*(dest + (index_dest + index_src)) = *(src + index_src);
-		else
-			*(dest + (index_dest + index_src)) = '';
 
 	}
 
