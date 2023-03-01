@@ -34,6 +34,7 @@ char *cap_string(char *str)
 				case ')':
 				case '{':
 				case '}':
+				case ' ':
 					str[index] = str[index] - 32;
 					break;
 			}
