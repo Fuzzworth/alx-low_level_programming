@@ -12,25 +12,20 @@
 
 char *leet(char *str)
 {
-	int index;
+	int index_one, index_two;
 
-	index = 0;
-	while (str[index])
+	char key[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char value[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+
+	for (index_one = 0; str[index_two] != '\0'; index_one++)
 	{
-		if ( str[index] == 'a'
-				|| str[index] == 'A'
-				|| str[index] == 'e'
-				|| str[index] == 'E'
-				|| str[index] == 'o'
-				|| str[index] == 'O'
-				|| str[index] == 't'
-				|| str[index] == 'T'
-				|| str[index] == 'l'
-				|| str[index] == 'L')
+		for (index_two = 0; index_two < 10; index_two++)
 		{
-			str[index] = str[index];
+			if (str[index_one] == key[index_two])
+			{
+				str[index_one] = value[index_two];
+			}
 		}
-		index++;
 	}
 	return (str);
 }
