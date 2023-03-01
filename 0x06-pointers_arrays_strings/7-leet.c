@@ -17,7 +17,7 @@ char *leet(char *str)
 	char key[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	char value[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	for (index_one = 0; str[index_two] != '\0'; index_one++)
+	for (index_one = 0; str[index_one] != '\0'; index_one++)
 	{
 		for (index_two = 0; index_two < 10; index_two++)
 		{
