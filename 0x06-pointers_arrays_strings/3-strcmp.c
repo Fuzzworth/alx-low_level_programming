@@ -17,8 +17,7 @@ int _strcmp(char *s1, char *s2)
 {
 	int index_s2, index_s1, length_s2, length_s1, s2_end, s1_end;
 
-	s2_end = s1_end = length_s2 = length_s1 = 0;
-	index_s2 = index_s1 = 0;
+	s2_end = s1_end = length_s2 = length_s1 = index_s2 = index_s1 = 0;
 	while (1)
 	{
 		if (s2_end == 1 && s1_end == 1)
@@ -44,7 +43,6 @@ int _strcmp(char *s1, char *s2)
 			index_s1++;
 		}
 	}
-
 	if (length_s1 > length_s2)
 		return (s2[index_s1] - s1[index_s1]);
 	else if (length_s1 < length_s2)
@@ -57,6 +55,5 @@ int _strcmp(char *s1, char *s2)
 			return (s1[index_s1] - s2[index_s1]);
 		}
 	}
-
 	return (0);
 }
