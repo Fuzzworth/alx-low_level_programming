@@ -13,16 +13,10 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int index_src, index_dest, length_src, length_dest;
-	int src_end, dest_end;
+	int index_src, index_dest, length_src, length_dest, src_end, dest_end;
 
-	src_end = 0;
-	dest_end = 0;
-	length_src = 0;
-	length_dest = 0;
-	index_src = 0;
-	index_dest = 0;
-
+	src_end = dest_end = length_src = length_dest = 0;
+	index_src = index_dest = 0;
 	while (1)
 	{
 		if (src_end == 1 && dest_end == 1)
