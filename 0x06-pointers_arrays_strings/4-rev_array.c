@@ -15,7 +15,8 @@ void reverse_array(int *a, int n)
 {
 	int temp, index, middle;
 
-	if (n % 2 != 0) {
+	if (n % 2 != 0)
+	{
 		for (index = 0; index < (n / 2); index++)
 		{
 			temp = a[index];
