@@ -49,5 +49,6 @@ char *_strncpy(char *dest, char *src, int n)
 		*(dest + index_src) = *(src + index_src);
 	}
 
+
 	return (dest);
 }
