@@ -47,7 +47,7 @@ char *_strncpy(char *dest, char *src, int n)
 	for (index_src = 0; index_src < n; index_src++)
 	{
 		if (index_src < length_src)
-			*(dest + (index_dest + index_src)) = *(src + index_src);
+			*(dest + index_src) = *(src + index_src);
 
 	}
 
