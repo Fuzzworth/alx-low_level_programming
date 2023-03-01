@@ -15,7 +15,7 @@ void reverse_array(int *a, int n)
 {
 	int temp, index;
 
-	if (n == 0)
+	if (n == 1)
 	{
 		/* do nothing */
 	}
