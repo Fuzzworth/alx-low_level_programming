@@ -13,7 +13,7 @@
 char *leet(char *str)
 {
 	int index_one, index_two;
-	
+
 	char key[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	char value[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
