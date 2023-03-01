@@ -51,7 +51,7 @@ char *_strcat(char *dest, char *src)
 
 	for (index_src = 0; index_src < length_src; index_src++)
 	{
-		*(dest + ((index_dest - 1) + index_src)) = *(src + index_src);
+		*(dest + (index_dest + index_src)) = *(src + index_src);
 	}
 
 	return (dest);
