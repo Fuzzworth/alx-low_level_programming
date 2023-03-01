@@ -54,5 +54,5 @@ char *_strcat(char *dest, char *src)
 		*(dest + ((index_dest - 1) + index_src)) = *(src + index_src);
 	}
 
-	return (*dest);
+	return (dest);
 }
