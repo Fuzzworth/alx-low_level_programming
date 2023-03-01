@@ -19,6 +19,10 @@ void reverse_array(int *a, int n)
 	{
 		/* do nothing */
 	}
+	else if (n == 0)
+	{
+		/* do nothing */
+	}
 	else if ((n / 2) != 0)
 	{
 		for (index = 0; index < (n / 2); index++)
