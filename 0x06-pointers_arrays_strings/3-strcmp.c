@@ -45,7 +45,7 @@ int _strcmp(char *s1, char *s2)
 		}
 	}
 
-	if (length_s1 > lenght_s2)
+	if (length_s1 > length_s2)
 		return (1);
 	else if (length_s1 < length_s2)
 		return (-1);
