@@ -44,7 +44,7 @@ char *_strncpy(char *dest, char *src, int n)
 		}
 	}
 
-	for (index_dest = 0; i < n && src[i] != '\0'; index_dest++)
+	for (index_dest = 0; index_dest < n && src[index_dest] != '\0'; index_dest++)
 		dest[index_dest] = src[index_dest];
 	for ( ; index_dest < n; index_dest++)
 		dest[index_dest] = '\0';
