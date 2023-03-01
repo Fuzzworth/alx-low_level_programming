@@ -4,7 +4,6 @@
  * leet - function that encodes a string into 1337
  *
  * Description: function that encodes a string into 1337
- * uppercase
  *
  * @str: string input
  *
@@ -18,28 +17,18 @@ char *leet(char *str)
 	index = 0;
 	while (str[index])
 	{
-		switch (str[index])
+		if ( str[index] == 'a'
+				|| str[index] == 'A'
+				|| str[index] == 'e'
+				|| str[index] == 'E'
+				|| str[index] == 'o'
+				|| str[index] == 'O'
+				|| str[index] == 't'
+				|| str[index] == 'T'
+				|| str[index] == 'l'
+				|| str[index] == 'L')
 		{
-			case 'a':
-			case 'A':
-				str[index] = '4';
-				break;
-			case 'e':
-			case 'E':
-				str[index] = '3';
-				break;
-			case 'o':
-			case 'O':
-				str[index] = '0';
-				break;
-			case 't':
-			case 'T':
-				str[index] = '7';
-				break;
-			case 'l':
-			case 'L':
-				str[index] = '1';
-				break;
+			str[index] = str[index];
 		}
 		index++;
 	}
