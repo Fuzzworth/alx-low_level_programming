@@ -21,7 +21,7 @@ void reverse_array(int *a, int n)
 		{
 			temp = a[index];
 			a[index] = a[(n - 1) - index];
-			a[n - (index - 1)] = temp;
+			a[(n - 1) - index] = temp;
 		}
 	}
 	else
@@ -30,7 +30,7 @@ void reverse_array(int *a, int n)
 		{
 			temp = a[index];
 			a[index] = a[(n - 1) - index];
-			a[n - (index - 1)] = temp;
+			a[(n - 1) - index ] = temp;
 		}
 	}
 }
