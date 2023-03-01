@@ -10,7 +10,7 @@
  * Return: return ROT13 String
  */
 
-char *tor13(char *str)
+char *rot13(char *str)
 {
 	int index_one, index_two;
 
