@@ -13,12 +13,23 @@
 
 void reverse_array(int *a, int n)
 {
-	int temp, index;
+	int temp, index, middle;
 
-	for (index = 0; index <= (n / 2); index++)
+	if (n % 2 != 0) {
+		for (index = 0; index < (n / 2); index++)
+		{
+			temp = a[index];
+			a[index] = a[n - (index - 1)];
+			a[n - (index - 1)] = temp;
+		}
+	}
+	else
 	{
-		temp = a[index];
-		a[index] = a[n - (index - 1)];
-		a[n - (index - 1)] = temp;
+		for (index = 0; index <= (n / 2); index++)
+		{
+			temp = a[index];
+			a[index] = a[n - (index - 1)];
+			a[n - (index - 1)] = temp;
+		}
 	}
 }
