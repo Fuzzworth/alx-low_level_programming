@@ -20,6 +20,7 @@ char *cap_string(char *str)
 	{
 		if (str[index] >= 'a' && str[index] <= 'z' && index == 0)
 			str[index] = str[index] - 32;
+
 		if (str[index] >= 'a' && str[index] <= 'z' && index > 0)
 		{
 			switch (str[index - 1])
