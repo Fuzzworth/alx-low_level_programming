@@ -46,7 +46,7 @@ int _strcmp(char *s1, char *s2)
 	}
 
 	if (length_s1 > length_s2)
-		return (s1[index_s1] - s2[index_s1]);
+		return (s2[index_s1] - s1[index_s1]);
 	else if (length_s1 < length_s2)
 		return (s1[index_s1] - s2[index_s1]);
 
