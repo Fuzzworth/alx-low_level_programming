@@ -19,11 +19,12 @@ char *rot13(char *str)
 
 	for (index_one = 0; str[index_one] != '\0'; index_one++)
 	{
-		for (index_two = 0; index_two < 26; index_two++)
+		for (index_two = 0; index_two < 52; index_two++)
 		{
 			if (str[index_one] == key[index_two])
 			{
 				str[index_one] = value[index_two];
+				break;
 			}
 		}
 	}
