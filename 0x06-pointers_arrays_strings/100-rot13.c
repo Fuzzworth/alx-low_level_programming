@@ -24,7 +24,6 @@ char *rot13(char *str)
 			if (str[index_one] == key[index_two])
 			{
 				str[index_one] = value[index_two];
-				break;
 			}
 		}
 	}
