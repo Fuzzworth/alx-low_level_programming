@@ -14,8 +14,8 @@ char *rot13(char *str)
 {
 	int index_one, index_two;
 
-	char *key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char *value = "NOPQRSTUVWXYZABCDEFGHIJKLM";
+	char *key = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *value = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (index_one = 0; str[index_one] != '\0'; index_one++)
 	{
@@ -24,6 +24,7 @@ char *rot13(char *str)
 			if (str[index_one] == key[index_two])
 			{
 				str[index_one] = value[index_two];
+				break;
 			}
 		}
 	}
