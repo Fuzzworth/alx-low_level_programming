@@ -13,19 +13,25 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int s_index, accept_index, number_of_matches;
+	int s_index, accept_index, number_of_matches, last_match;
 
 	number_of_matches = 0;
+	last_match = -1;
 
 	for (s_index = 0; s[s_index] != '\0'; s_index++)
 	{
 		for (accept_index = 0; accept[accept_index] != '\0'; accept_index++)
 		{
-			if (s[s_index] == accept[accept_index]
-					&& accept[accept_index] != '\0'
-					&& s[s_index] != '\0')
+			if (s[s_index] == accept[accept_index] && last_match == (s_index - 1))
 			{
 				number_of_matches++;
+				last_match = s_index;
+				break;
+			}
+			else if (s[s_index] == accept[accept_index] && last_match != (s_index - 1))
+			{
+				number_of_matches = 1;
+				last_match = s_index;
 				break;
 			}
 		}
