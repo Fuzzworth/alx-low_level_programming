@@ -18,6 +18,9 @@ unsigned int _strspn(char *s, char *accept)
 	max_match = number_of_matches = 0;
 	last_match = -1;
 
+	if (s[0] == '\0')
+		return (0);
+
 	for (s_index = 0; s[s_index] != '\0'; s_index++)
 	{
 		for (accept_index = 0; accept[accept_index] != '\0'; accept_index++)
