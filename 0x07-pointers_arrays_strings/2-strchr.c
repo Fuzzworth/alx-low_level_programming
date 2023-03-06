@@ -13,14 +13,16 @@
 
 char *_strchr(char *s, char c)
 {
-	int index;
+	int index, s_length;
+
+	s_length= 0;
+
+	for (index = 0; *(s + index) != '\0'; index++)
+		s_length++;
 
 	index = 0;
 
-	if (*(s + index) == '\0' && *(s + index) == c)
-		return (s);
-
-	while (*(s + index))
+	while (index <= s_length)
 	{
 		if (*(s + index) == c)
 			return (s + index);
