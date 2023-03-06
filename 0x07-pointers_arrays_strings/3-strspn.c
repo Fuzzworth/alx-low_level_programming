@@ -42,6 +42,11 @@ unsigned int _strspn(char *s, char *accept)
 					max_match = number_of_matches;
 				break;
 			}
+			else if (accept[accept_index] == '\0')
+			{
+				number_of_matches = 0;
+				break;
+			}
 		}
 	}
 
