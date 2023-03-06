@@ -27,7 +27,7 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-	}	
+	}
 
 	return (number_of_matches);
 }
