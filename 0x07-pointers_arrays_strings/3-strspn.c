@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		for (accept_index = 0; accept[accept_index] != '\0'; accept_index++)
 		{
-			if (s[s_index] == accept[accept_index] 
+			if (s[s_index] == accept[accept_index]
 					&& accept[accept_index] != '\0'
 					&& s[s_index] != '\0')
 			{
