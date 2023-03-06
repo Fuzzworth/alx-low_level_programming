@@ -13,7 +13,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int s_index, accept_index, number_of_matches, last_match, max_match;
+	unsigned int s_index, accept_index, number_of_matches, last_match, max_match;
 
 	max_match = number_of_matches = 0;
 	last_match = -1;
