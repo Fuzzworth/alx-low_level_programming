@@ -37,6 +37,12 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				number_of_matches = 1;
 			}
+			else if (s[s_index] != accept[accept_index]
+					&& accept[accept_index] == '\0')
+			{
+				number_of_matches = 0;
+				break;
+			}
 
 			if (s[s_index] == accept[accept_index])
 			{
