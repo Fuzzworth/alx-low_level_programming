@@ -13,9 +13,9 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int s_index, accept_index, number_of_matches, last_match;
+	int s_index, accept_index, number_of_matches, last_match, max_match;
 
-	number_of_matches = 0;
+	max_match = number_of_matches = 0;
 	last_match = -1;
 
 	for (s_index = 0; s[s_index] != '\0'; s_index++)
@@ -26,16 +26,20 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				number_of_matches++;
 				last_match = s_index;
+				if (max_match < number_of_matches)
+					max_match = number_of_matches;
 				break;
 			}
 			else if (s[s_index] == accept[accept_index] && last_match != (s_index - 1))
 			{
 				number_of_matches = 1;
 				last_match = s_index;
+				if (max_match < number_of_matches)
+					max_match = number_of_matches;
 				break;
 			}
 		}
 	}
 
-	return (number_of_matches);
+	return (max_match);
 }
