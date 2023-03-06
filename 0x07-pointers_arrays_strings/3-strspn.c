@@ -13,7 +13,8 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int s_index, accept_index, number_of_matches, last_match, max_match;
+	unsigned int s_index, accept_index, number_of_matches, last_match,
+		     max_match;
 
 	max_match = number_of_matches = 0;
 	last_match = -1;
@@ -23,13 +24,16 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (s_index = 0; s[s_index] != '\0'; s_index++)
 	{
-		for (accept_index = 0; accept[accept_index] != '\0'; accept_index++)
+		for (accept_index = 0; accept[accept_index] != '\0';
+				accept_index++)
 		{
-			if (s[s_index] == accept[accept_index] && last_match == (s_index - 1))
+			if (s[s_index] == accept[accept_index] &&
+					last_match == (s_index - 1))
 			{
 				number_of_matches++;
 			}
-			else if (s[s_index] == accept[accept_index] && last_match != (s_index - 1))
+			else if (s[s_index] == accept[accept_index] &&
+					last_match != (s_index - 1))
 			{
 				number_of_matches = 1;
 			}
