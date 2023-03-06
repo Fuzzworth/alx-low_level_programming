@@ -27,13 +27,17 @@ unsigned int _strspn(char *s, char *accept)
 		for (accept_index = 0; accept[accept_index] != '\0';
 				accept_index++)
 		{
-			if (s[s_index] == accept[accept_index] &&
-					last_match == (s_index - 1))
+			if (s[s_index] == accept[accept_index]
+					&& last_match == (s_index - 1)
+					&& s[s_index] != '\0'
+					&& accept[accept_index] != '\0')
 			{
 				number_of_matches++;
 			}
-			else if (s[s_index] == accept[accept_index] &&
-					last_match != (s_index - 1))
+			else if (s[s_index] == accept[accept_index]
+					&& last_match != (s_index - 1)
+					&& s[s_index] != '\0'
+					&& accept[accept_index] != '\0')
 			{
 				number_of_matches = 1;
 			}
