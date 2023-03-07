@@ -32,5 +32,5 @@ void print_diagsums(int *a, int size)
 				diagsum_two += row[(size - n_index - 1)];
 		}
 	}
-	printf("%d, %d\n",diagsum_one, diagsum_two);
+	printf("%d, %d\n", diagsum_one, diagsum_two);
 }
