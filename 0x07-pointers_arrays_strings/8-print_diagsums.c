@@ -27,6 +27,7 @@ void print_diagsums(int *a, int size)
 		row = &a[0];
 		for (n_index = 0; n_index < size; n_index++)
 		{
+			printf("%d ",a[h_index][n_index]);
 			if (h_index == n_index)
 				diagsum_one += row[n_index];
 			if (h_index == (size - n_index - 1))
