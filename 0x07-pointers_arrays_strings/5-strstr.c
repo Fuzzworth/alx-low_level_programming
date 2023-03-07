@@ -16,9 +16,6 @@ char *_strstr(char *haystack, char *needle)
 {
 	unsigned int n_index, h_index, is_match;
 
-	if (haystack == 0 || needle == 0)
-		return (0);
-
 	for (h_index = 0; haystack[h_index] != '\0' ; h_index++)
 	{
 		if (haystack[h_index] == needle[0])
@@ -26,8 +23,7 @@ char *_strstr(char *haystack, char *needle)
 			is_match = 1;
 			for (n_index = 0; needle[n_index] != '\0'; n_index++)
 			{
-				if (haystack[h_index + n_index] == '\0'
-						|| haystack[h_index + n_index] != needle[n_index])
+				if (haystack[h_index + n_index] != needle[n_index])
 				{
 					is_match = 0;
 					break;
