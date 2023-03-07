@@ -14,27 +14,20 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int n_index, h_index, is_match;
+	unsigned int n_index, h_index;
 
 	for (h_index = 0; haystack[h_index] != '\0' ; h_index++)
 	{
-		if (haystack[h_index] == needle[0])
-		{
-			is_match = 1;
 			for (n_index = 0; needle[n_index] != '\0'; n_index++)
 			{
 				if (haystack[h_index + n_index] != needle[n_index])
 				{
-					is_match = 0;
 					break;
 				}
 			}
 
-			if (is_match)
+			if (!needle[n_index])
 				return (haystack + h_index);
-
-		}
-
 	}
 
 	return (0);
