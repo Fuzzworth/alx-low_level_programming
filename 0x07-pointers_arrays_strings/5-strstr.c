@@ -15,7 +15,7 @@
 char *_strstr(char *haystack, char *needle)
 {
 	unsigned int n_index, h_index, is_match;
-	
+
 	for (h_index = 0; haystack[h_index] != '\0' ; h_index++)
 	{
 		if (haystack[h_index] == needle[0])
@@ -37,7 +37,7 @@ char *_strstr(char *haystack, char *needle)
 				h_index += n_index;
 
 		}
-	
+
 	}
 
 	return (0);
