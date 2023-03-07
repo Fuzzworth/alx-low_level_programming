@@ -32,7 +32,6 @@ char *_strstr(char *haystack, char *needle)
 
 			if (is_match)
 				return (haystack + h_index);
-			h_index += n_index;
 
 		}
 
