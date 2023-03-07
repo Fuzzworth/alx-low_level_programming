@@ -31,7 +31,7 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 
-		if(!has_match)
+		if (!has_match)
 			return (number_of_matches);
 	}
 
