@@ -18,20 +18,18 @@ void print_diagsums(int *a, int size)
 {
 	int n_index, h_index;
 	unsigned int diagsum_one, diagsum_two;
-	int *row;
+	int (*row)[size]; (int (*)[size]) a;
 
 	diagsum_one = diagsum_two = 0;
 
 	for (h_index = 0; h_index < size; h_index++)
 	{
-		row = &a[0];
 		for (n_index = 0; n_index < size; n_index++)
 		{
-			printf("%d ",a[h_index][n_index]);
 			if (h_index == n_index)
-				diagsum_one += row[n_index];
+				diagsum_one += row[h_index][n_index];
 			if (h_index == (size - n_index - 1))
-				diagsum_two += row[(size - n_index - 1)];
+				diagsum_two += row[h_index][(size - n_index - 1)];
 		}
 	}
 	printf("%d, %d\n", diagsum_one, diagsum_two);
