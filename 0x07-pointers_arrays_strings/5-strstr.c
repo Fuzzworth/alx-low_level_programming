@@ -18,16 +18,15 @@ char *_strstr(char *haystack, char *needle)
 
 	for (h_index = 0; haystack[h_index] != '\0' ; h_index++)
 	{
-			for (n_index = 0; needle[n_index] != '\0'; n_index++)
+		for (n_index = 0; needle[n_index] != '\0'; n_index++)
+		{
+			if (haystack[h_index + n_index] != needle[n_index])
 			{
-				if (haystack[h_index + n_index] != needle[n_index])
-				{
-					break;
-				}
+				break;
 			}
-
-			if (!needle[n_index])
-				return (haystack + h_index);
+		}
+		if (!needle[n_index])
+			return (haystack + h_index);
 	}
 
 	return (0);
