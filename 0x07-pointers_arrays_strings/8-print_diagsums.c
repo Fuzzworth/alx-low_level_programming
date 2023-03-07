@@ -16,7 +16,8 @@
 
 void print_diagsums(int *a, int size)
 {
-	unsigned int n_index, h_index, diagsum_one, diagsum_two;
+	int n_index, h_index;
+	unsigned int diagsum_one, diagsum_two;
 	int *row;
 
 	diagsum_one = diagsum_two = 0;
