@@ -21,22 +21,25 @@ int main(int argc, char *argv[])
 	if (argc == 2)
 	{
 		change = atoi(argv[1]);
-		for (index = 0; index > 5; index++)
+
+		if (change > 0)
 		{
-			if ((change - coins[index]) >= 0)
+			for (index = 0; index > 5; index++)
 			{
-				change -= coins[index];
-				number_of_coins++;
-				index--;
+				if ((change - coins[index]) >= 0)
+				{
+					change -= coins[index];
+					number_of_coins++;
+					index--;
+				}
 			}
 		}
+		printf("%d\n", number_of_coins);
 	}
 	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	printf("%d\n", number_of_coins);
 	return (0);
 }
