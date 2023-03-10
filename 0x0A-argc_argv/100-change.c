@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 		if (change > 0)
 		{
-			for (index = 0; index > 5; index++)
+			for (index = 0; index < 5; index++)
 			{
 				if ((change - coins[index]) >= 0)
 				{
