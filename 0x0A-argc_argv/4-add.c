@@ -6,8 +6,7 @@
  *
  * Description: prints its name, followed by a new line
  *
- * @argc: number of arguments
- * @argv: Command line arguments
+ * @n: number symbol
  *
  * Return: 0;
  */
@@ -21,8 +20,7 @@ int isdigit(int n)
  *
  * Description: prints its name, followed by a new line
  *
- * @argc: number of arguments
- * @argv: Command line arguments
+ * @s: number string
  *
  * Return: 0;
  */
