@@ -1,11 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * isdigit - prints its name, followed by a new line
+ *
+ * Description: prints its name, followed by a new line
+ *
+ * @argc: number of arguments
+ * @argv: Command line arguments
+ *
+ * Return: 0;
+ */
 int isdigit(int n)
 {
 	return ((n >= '0' && n <= '9') || n == '-' || n == '+');
 }
 
+/**
+ * isNumber - prints its name, followed by a new line
+ *
+ * Description: prints its name, followed by a new line
+ *
+ * @argc: number of arguments
+ * @argv: Command line arguments
+ *
+ * Return: 0;
+ */
 int isNumber(char *s)
 {
 	int i, isD;
@@ -31,7 +51,6 @@ int isNumber(char *s)
  *
  * Return: 0;
  */
-
 int main(int argc, char *argv[])
 {
 	int sum, index;
