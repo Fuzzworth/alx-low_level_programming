@@ -12,13 +12,13 @@ int isNumber(char *s)
 
 	isD = 0;
 
-	for (int i = 0; s[i]!= '\0'; i++)
+	for (int i = 0; s[i] != '\0'; i++)
 	{
 		isD = isdigit(s[i]);
 		if (!isD)
-			return 0;
+			return (0);
 	}
-	return 1;
+	return (1);
 }
 
 /**
