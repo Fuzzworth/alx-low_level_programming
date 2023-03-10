@@ -3,7 +3,7 @@
 
 int isdigit(int n)
 {
-	return (n >= '0' && n <= '9' || n == '-' || n == '+');
+	return ((n >= '0' && n <= '9') || n == '-' || n == '+');
 }
 
 int isNumber(char *s)
@@ -12,7 +12,7 @@ int isNumber(char *s)
 
 	isD = 0;
 
-	for (int i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		isD = isdigit(s[i]);
 		if (!isD)
