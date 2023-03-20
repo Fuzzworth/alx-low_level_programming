@@ -22,12 +22,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *nn, *no;
 
 	dog = malloc(sizeof(dog_type));
+
 	if (dog == 0 || name == 0 || owner == 0)
 		return (0);
-	strcpy(nn, *name);
+
+	nn = (char *) malloc(sizeof(name));
+	no = (char *) malloc(sizeof(owner));
+
+	if (nn == 0 || no == 0)
+		return (0);
+
+	strcpy(nn, name);
 	strcpy(no, *owner);
+
 	dog->name = nn;
 	dog->owner = no;
 	dog->age = age;
+
 	return (dog);
 }
