@@ -19,15 +19,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t dog_type;
 	dog_t *dog;
-	char *nn, *no;
+	char* nn, no;
 
 	dog = malloc(sizeof(dog_type));
 
 	if (dog == 0)
 		return (0);
 
-	nn = (char *) malloc(sizeof(name));
-	no = (char *) malloc(sizeof(owner));
+	nn = (char*) malloc(sizeof(name));
+	no = (char*) malloc(sizeof(owner));
 
 	if (nn == 0 || no == 0)
 		return (0);
