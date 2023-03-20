@@ -26,8 +26,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog == 0)
 		return (0);
 
-	nn = (char*) malloc(sizeof(name));
-	no = (char*) malloc(sizeof(owner));
+	nn = (char *) malloc(sizeof(name));
+	no = (char *) malloc(sizeof(owner));
 
 	if (nn == 0 || no == 0)
 		return (0);
