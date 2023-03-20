@@ -26,10 +26,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (0);
 	if (name == 0)
 		return (0);
+	else
+		new_name = name;
 	if (owner == 0)
 		return (0);
-	dog->name = name;
+	else
+		new_owner = owner;
+	dog->name = new_name;
 	dog->age = age;
-	dog->owner = owner;
+	dog->owner = new_owner;
 	return (dog);
 }
