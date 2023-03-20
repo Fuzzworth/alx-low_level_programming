@@ -14,8 +14,9 @@
 
 void print_dog(struct dog *d)
 {
-	char *name, *owner;
-
+	char *name, *owner, *nil;
+	
+	*nil = "(nil)";
 	if (d != 0)
 	{
 		(d->name != 0) ? name = d->name : name = "(nil)";
