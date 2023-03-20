@@ -1,6 +1,17 @@
 #ifndef DOG_MACRO
 #define DOG_MACRO
 
+/**
+ * dog - puppy stuct
+ *
+ * Description: puppy struct
+ *
+ * @name: string name
+ * @age: age in float
+ * @owner: string owner
+ *
+ * Return: 0 success
+ */
 struct dog
 {
 	char *name;
