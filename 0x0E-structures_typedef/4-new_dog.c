@@ -19,12 +19,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t dog_type;
 	dog_t *dog;
+	char *nn, *no;
 
 	dog = malloc(sizeof(dog_type));
 	if (dog == 0 || name == 0 || owner == 0)
 		return (0);
-	dog->name = name;
-	dog->owner = owner;
+	strcpy(nn, name);
+	strcpy(no, owner);
+	dog->name = nn;
+	dog->owner = no;
 	dog->age = age;
 	return (dog);
 }
