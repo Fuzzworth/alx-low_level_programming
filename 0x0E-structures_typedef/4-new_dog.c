@@ -23,8 +23,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (dog == 0 || name == 0 || owner == 0)
 		return (0);
-	dog->name = new_name;
+	dog->name = name;
 	dog->age = age;
-	dog->owner = new_owner;
+	dog->owner = owner;
 	return (dog);
 }
