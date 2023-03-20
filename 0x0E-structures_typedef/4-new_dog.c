@@ -19,7 +19,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t dog_type;
 	dog_t *dog;
-	char *nn, *no;
+	char *nn = *no = 0;
 
 	dog = malloc(sizeof(dog_type));
 	if (dog == 0 || name == 0 || owner == 0)
