@@ -2,7 +2,7 @@
 #define DOG_MACRO
 
 /**
- * dog - puppy stuct
+ * struct dog - puppy stuct
  *
  * Description: puppy struct
  *
