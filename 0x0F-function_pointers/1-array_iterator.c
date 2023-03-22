@@ -20,6 +20,6 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	if (array != 0 && size > 0  && action != 0)
 	{
 		for (index = 0; index < size; index++)
-			action(array[index])
+			action(array[index]);
 	}
 }
