@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
 
 /**
  * print_all - function that prints anything
@@ -32,12 +33,9 @@ void print_all(const char * const format, ...)
 	char *string_placeholder;
 
 	va_start(all_parameters, format);
-	index_format = n = 0;
-	while (format[index_format])
-	{
-		n++;
-		index_format++;
-	}
+	index_format = 0;
+	n = strlen(format);
+
 	while (format[index_format])
 	{
 		switch (format[index_format])
