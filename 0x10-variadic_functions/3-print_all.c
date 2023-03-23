@@ -58,6 +58,7 @@ void print_all(const char * const format, ...)
 				printf("%s", string_placeholder ? string_placeholder : "(nil)");
 				break;
 			default:
+				index_format++;
 				continue;
 		}
 		if (format[index_format + 1] != '\0' && format[index_format] != '\0')
