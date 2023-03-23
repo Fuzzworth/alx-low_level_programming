@@ -16,7 +16,7 @@
  * c = char
  * i = integer
  * f = float
- * s = char * (if the string is NULL, print (nil) instead 
+ * s = char * (if the string is NULL, print (nil) instead
  * any other char should be ignored
  *
  * Return: nothing
