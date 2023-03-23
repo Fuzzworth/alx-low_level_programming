@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	printf("%d\n", (int) op(a, b));
+	printf("%d\n", op(a, b));
 
 	return (0);
 }
