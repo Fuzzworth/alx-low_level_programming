@@ -39,22 +39,18 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				character_placeholder = (char) va_arg(all_parameters, int);
-				printf(" _CHARACTER_ ");
 				printf("%c", character_placeholder);
 				break;
 			case 'i':
 				integer_placeholder = va_arg(all_parameters, int);
-				printf(" _INTEGER_ ");
 				printf("%d", integer_placeholder);
 				break;
 			case 'f':
 				float_placeholder = (float) va_arg(all_parameters, double);
-				printf(" _FLOAT_ ");
 				printf("%f", float_placeholder);
 				break;
 			case 's':
 				string_placeholder = va_arg(all_parameters, char *);
-				printf(" _STRING_ ");
 				printf("%s", string_placeholder ? string_placeholder : "(nil)");
 				break;
 			default:
