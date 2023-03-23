@@ -15,7 +15,7 @@
 int main(int argc, char *argv[])
 {
 	int a, b, result;
-	int (*op)(int, int);
+	void (*op)(int, int);
 
 	if (argc != 4)
 	{
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	op = (int (*)(int,  int)) get_op_func(argv[2]);
+	op = get_op_func(argv[2]);
 	result = op(a, b);
 
 	return (0);
