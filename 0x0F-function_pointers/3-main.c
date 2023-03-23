@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "3-calc.h"
 
 /**
  * main - prints its name, followed by a new line
