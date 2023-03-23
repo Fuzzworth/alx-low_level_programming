@@ -54,9 +54,7 @@ void print_all(const char * const format, ...)
 				string_placeholer = va_arg(all_parameters, char *);
 				printf("%s", string_placeholder ? string_placeholder : "(nil)");
 				break;
-
 		}
-		
 		if (index_format != (n - 1))
 			printf(", ");
 		index_format++;
