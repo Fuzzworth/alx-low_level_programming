@@ -34,34 +34,34 @@ void print_all(const char * const format, ...)
 	va_start(all_parameters, format);
 	index_format = 0;
 	if (format != 0)
-	while (format[index_format])
-	{
-		switch (format[index_format])
+		while (format[index_format])
 		{
-			case 'c':
-				character_placeholder = (char) va_arg(all_parameters, int);
-				printf("%c", character_placeholder);
-				break;
-			case 'i':
-				integer_placeholder = va_arg(all_parameters, int);
-				printf("%d", integer_placeholder);
-				break;
-			case 'f':
-				float_placeholder = (float) va_arg(all_parameters, double);
-				printf("%f", float_placeholder);
-				break;
-			case 's':
-				string_placeholder = va_arg(all_parameters, char *);
-				printf("%s", string_placeholder ? string_placeholder : "(nil)");
-				break;
-			default:
-				index_format++;
-				continue;
+			switch (format[index_format])
+			{
+				case 'c':
+					character_placeholder = (char) va_arg(all_parameters, int);
+					printf("%c", character_placeholder);
+					break;
+				case 'i':
+					integer_placeholder = va_arg(all_parameters, int);
+					printf("%d", integer_placeholder);
+					break;
+				case 'f':
+					float_placeholder = (float) va_arg(all_parameters, double);
+					printf("%f", float_placeholder);
+					break;
+				case 's':
+					string_placeholder = va_arg(all_parameters, char *);
+					printf("%s", string_placeholder ? string_placeholder : "(nil)");
+					break;
+				default:
+					index_format++;
+					continue;
+			}
+			if (format[index_format + 1] != '\0' && format[index_format] != '\0')
+				printf(", ");
+			index_format++;
 		}
-		if (format[index_format + 1] != '\0' && format[index_format] != '\0')
-			printf(", ");
-		index_format++;
-	}
 	va_end(all_parameters);
 	printf("\n");
 }
