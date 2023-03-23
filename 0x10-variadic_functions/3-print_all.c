@@ -57,7 +57,7 @@ void print_all(const char * const format, ...)
 			default:
 				break;
 		}
-		if (format[index_format + 1] != '\0')
+		if (format[index_format + 1] != '\0' && format[index_format])
 			printf(", ");
 		index_format++;
 	}
