@@ -26,7 +26,6 @@ void print_all(const char * const format, ...)
 {
 	va_list all_parameters;
 	unsigned int index_format;
-	
 	char character_placeholder;
 	int integer_placeholder;
 	float float_placeholder;
