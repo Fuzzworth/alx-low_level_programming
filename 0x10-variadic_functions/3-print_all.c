@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				character_placeholder = (char) va_arg(all_parameters, int);
-				if (character_placeholder)
+				if (character_placeholder != '\0')
 					printf("%c", character_placeholder);
 				break;
 			case 'i':
@@ -57,7 +57,7 @@ void print_all(const char * const format, ...)
 			default:
 				break;
 		}
-		if (format[index_format + 1] != '\0' && format[index_format])
+		if (format[index_format + 1] != '\0' && format[index_format] != '\0')
 			printf(", ");
 		index_format++;
 	}
