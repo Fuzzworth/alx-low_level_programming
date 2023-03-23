@@ -7,7 +7,7 @@
  * Description: function that prints numbers, followed by a new line
  *
  * @n: indefinite number of integer arguments
- * @seperator: string seperator
+ * @separator: string seperator
  *
  * Return: void
  */
@@ -19,14 +19,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(all_parameters, n);
 
-	if (seperator == 0)
+	if (separator == 0)
 		return;
 
 	for (index = 0; index < n; index++)
 	{
 		printf("%d", va_arg(all_parameters, int));
 		if (index != (n - 1))
-			printf(", ");
+			printf("%s ", seperator);
 	}
 	printf("\n");
 }
