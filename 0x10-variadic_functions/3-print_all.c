@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 		switch (format[index_format])
 		{
 			case 'c':
-				character_placeholder = (char) va_arg(all_parameters, char);
+				character_placeholder = (char) va_arg(all_parameters, int);
 				printf("%c", character_placeholder);
 				break;
 			case 'i':
@@ -49,7 +49,7 @@ void print_all(const char * const format, ...)
 				printf("%d", integer_placeholder);
 				break;
 			case 'f':
-				float_placeholder = (float) va_arg(all_parameters, float);
+				float_placeholder = (float) va_arg(all_parameters, double);
 				printf("%f", float_placeholder);
 				break;
 			case 's':
