@@ -25,14 +25,20 @@
 void print_all(const char * const format, ...)
 {
 	va_list all_parameters;
-	unsigned int index_format;
+	unsigned int index_format, n;
 	char character_placeholder;
 	int integer_placeholder;
 	float float_placeholder;
 	char *string_placeholder;
 
 	va_start(all_parameters, format);
-	index_format = 0;
+	index_format = n = 0;
+
+	while (format[index_format])
+	{
+		n++;
+	}
+
 
 	while (format[index_format])
 	{
