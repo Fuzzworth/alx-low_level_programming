@@ -24,7 +24,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d", va_arg(all_parameters, int));
 		if (separator == 0)
 		{
-			printf(" ");
+			printf("");
 		}
 		else if (index != (n - 1) && separator != 0)
 		{
