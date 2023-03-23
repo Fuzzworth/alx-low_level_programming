@@ -33,6 +33,8 @@ void print_all(const char * const format, ...)
 
 	va_start(all_parameters, format);
 	index_format = 0;
+	if (format == 0)
+		return;
 	while (format[index_format])
 	{
 		switch (format[index_format])
