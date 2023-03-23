@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * print_srings - function that prints strings, followed by a new line.
+ * print_strings - function that prints strings, followed by a new line.
  *
  * Description: function that prints strings, followed by a new line.
  *
