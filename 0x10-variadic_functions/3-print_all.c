@@ -40,11 +40,8 @@ void print_all(const char * const format, ...)
 			case 'c':
 				character_placeholder = (char) va_arg(all_parameters, int);
 				if (character_placeholder)
-				{
 					printf("%c", character_placeholder);
-					break;
-				}
-				
+				break;
 			case 'i':
 				integer_placeholder = va_arg(all_parameters, int);
 				printf("%d", integer_placeholder);
