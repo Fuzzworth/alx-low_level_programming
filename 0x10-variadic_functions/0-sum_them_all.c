@@ -21,7 +21,7 @@ int sum_them_all(const unsigned int n, ...)
 	sum  = 0;
 	va_start(all_parameters, n);
 
-	for (index = n; index != 0; index = va_arg(all_parameters,int))
+	for (index = n; index != 0; index = va_arg(all_parameters, int))
 		sum += index;
 
 	return (sum);
