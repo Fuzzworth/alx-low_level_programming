@@ -51,7 +51,7 @@ void print_all(const char * const format, ...)
 				printf("%f", float_placeholder);
 				break;
 			case 's':
-				string_placeholer = va_arg(all_parameters, char *);
+				string_placeholder = va_arg(all_parameters, char *);
 				printf("%s", string_placeholder ? string_placeholder : "(nil)");
 				break;
 		}
