@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 
 	op = get_op_func(argv[2]);
-	result = op(a,b);
+	result = op(a, b);
 
 	return (0);
 }
