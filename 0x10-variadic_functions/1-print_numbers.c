@@ -9,7 +9,7 @@
  * @n: indefinite number of integer arguments
  * @separator: string seperator
  *
- * Return: void
+ * Return: nothing
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -18,6 +18,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int index;
 
 	va_start(all_parameters, n);
+
+	if (n == 0)
+		return;
 
 	for (index = 0; index < n; index++)
 	{
