@@ -57,7 +57,7 @@ void print_all(const char * const format, ...)
 				printf("%s", string_placeholder ? string_placeholder : "(nil)");
 				break;
 		}
-		if (index_format < (n - 1))
+		if (format[index_format + 1] != '\0')
 			printf(", ");
 		printf("%d", index_format);
 		index_format++;
