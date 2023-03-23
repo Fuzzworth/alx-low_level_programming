@@ -56,10 +56,8 @@ void print_all(const char * const format, ...)
 				string_placeholder = va_arg(all_parameters, char *);
 				printf("%s", string_placeholder ? string_placeholder : "(nil)");
 				break;
-			default:
 		}
-		if (index_format != (n - 1))
-			printf(", ");
+		printf(", ");
 		printf("%d", index_format);
 		index_format++;
 	}
