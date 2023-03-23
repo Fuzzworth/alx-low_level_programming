@@ -21,7 +21,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (index = 0; index < n; index++)
 	{
-		printf("%s", va_arg(all_parameters, int) ? va_arg(all_parameters, int) : "(nil)");
+		printf("%s", 
+			va_arg(all_parameters, int) ? va_arg(all_parameters, int) : "(nil)");
 		if (index != (n - 1) && separator != 0)
 			printf("%s", separator);
 	}
