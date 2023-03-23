@@ -44,11 +44,11 @@ void print_all(const char * const format, ...)
 				break;
 			case 'i':
 				integer_placeholder = va_arg(all_parameters, int);
-				printf("%d", integerr_placeholder);
+				printf("%d", integer_placeholder);
 				break;
 			case 'f':
 				float_placeholder = va_arg(all_parameters, float);
-				printf("%f", flat_placeholder);
+				printf("%f", float_placeholder);
 				break;
 			case 's':
 				string_placeholer = va_arg(all_parameters, char *);
