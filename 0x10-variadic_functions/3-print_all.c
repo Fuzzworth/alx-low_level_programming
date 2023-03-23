@@ -59,6 +59,7 @@ void print_all(const char * const format, ...)
 		}
 		if (index_format != (n - 1))
 			printf(", ");
+		printf("%d", index_format);
 		index_format++;
 	}
 	va_end(all_parameters);
