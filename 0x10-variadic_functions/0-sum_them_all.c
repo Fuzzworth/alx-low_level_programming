@@ -14,8 +14,7 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list all_parameters;
-	int index;
-	unsigned int sum;
+	unsigned int sum, index;
 
 	sum  = 0;
 	va_start(all_parameters, n);
