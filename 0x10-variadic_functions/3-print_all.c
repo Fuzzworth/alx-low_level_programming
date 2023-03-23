@@ -57,7 +57,6 @@ void print_all(const char * const format, ...)
 		}
 		if (format[index_format + 1] != '\0')
 			printf(", ");
-		printf("%d", index_format);
 		index_format++;
 	}
 	va_end(all_parameters);
