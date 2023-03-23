@@ -23,10 +23,8 @@ int sum_them_all(const unsigned int n, ...)
 	if (n == 0)
 		return (0);
 
-	for (index = n; index != 0; index = va_arg(all_parameters, int))
-	{
-		sum += index;
-	}
+	for (index = 0; index < n; index++)
+		sum += va_arg(all_parameters,index);
 
 	return (sum);
 }
