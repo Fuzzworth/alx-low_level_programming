@@ -5,14 +5,12 @@
  *
  * Description: long description
  *
- * @a: argument_1 description
- * @b: argument_2 description
  * @s: argument_3 description
  *
  * Return: void
  */
 
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
