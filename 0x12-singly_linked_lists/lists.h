@@ -17,5 +17,6 @@ typedef struct list_s
 } list_t;
 
 char _putchar(char c);
+size_t print_list(const list_t *h);
 
 #endif
