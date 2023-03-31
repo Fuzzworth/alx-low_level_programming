@@ -13,16 +13,16 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, current_node;
+	list_t *new, *current_node;
 
-	current_node = **head;
+	current_node = *head;
 	if (head == 0)
 		return (0);
 	new = (list_t *) malloc(sizeof(list_t));
 
-	while (current_node.next != 0)
+	while (current_node)
 	{
-		printf("[%d] %s", current_node.len, current_node.str);
+		printf("[%d] %s", current_node->len, current_node->str);
 	}
 
 	if (new == NULL)
