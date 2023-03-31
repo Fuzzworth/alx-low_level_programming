@@ -1,5 +1,5 @@
 ; ----------------------------------------------------------------------------------------
-; Writes "Hello, Holberton\n" to the console using a C library. Runs on Linux.
+; Writes "Hello, Holberton" to the console using a C library. Runs on Linux.
 ;
 ;     nasm -f elf64 101-hello_holberton.asm && gcc -no-pie -std=gnu89 101-hello_holberton.o -o hello
 ; ----------------------------------------------------------------------------------------
@@ -13,4 +13,4 @@ main:                                       ; This is called by the C library st
           call      puts                    ; puts(message)
           ret                               ; Return from main back into C library wrapper
 message:
-          db        "Hello, Holberton\n", 0        ; Note strings must be terminated with 0 in C
+          db        "Hello, Holberton", 0        ; Note strings must be terminated with 0 in C
