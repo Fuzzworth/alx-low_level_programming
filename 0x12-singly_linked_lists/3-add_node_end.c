@@ -32,8 +32,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	current_node = *head;
 
 	while (current_node->next != 0)
+	{
+		printf("[%d] %s\n", current_node->len, current_node->str);
 		current_node = current_node->next;
-
+	}
 	current_node->next = new;
 
 	return (new);
