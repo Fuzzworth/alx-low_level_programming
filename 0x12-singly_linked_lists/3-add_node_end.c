@@ -20,7 +20,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (new == NULL)
 	{
 		printf("Error\n");
-		return (0);
+		return (NULL);
 	}
 	new->str = strdup(str);
 	new->len = strlen(str);
