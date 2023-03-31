@@ -1,16 +1,13 @@
 section .data
-    msg db "Hello, Holberton\n",10      ; 10 is the ASCII code for a new line (LF)
+
+    message db "Hello, Holberton\n", 10
 
 section .text
-    global _start
 
+global _start
 _start:
     mov rax, 1
     mov rdi, 1
-    mov rsi, msg
-    mov rdx, 13
-    syscall
-
-    mov rax, 60
-    mov rdi, 0
+    mov rsi, message
+    mov rdx, 14
     syscall
