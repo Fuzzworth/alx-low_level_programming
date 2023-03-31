@@ -21,6 +21,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	while (currnet_node->next != 0)
 	{
+		printf("[%d] %s", currnet_node->len, currnet_node->str);
 		currnet_node = currnet_node->next;
 	}
 
