@@ -25,15 +25,15 @@ list_t *add_node_end(list_t **head, const char *str)
 		currnet_node = currnet_node->next;
 	}
 
-//	if (new == NULL)
-//	{
-//		printf("Error\n");
-//		return (0);
-//	}
-//	new->str = strdup(str);
-//	new->len = strlen(str);
-//	new->next = 0;
+	if (new == NULL)
+	{
+		printf("Error\n");
+		return (0);
+	}
+	new->str = strdup(str);
+	new->len = strlen(str);
+	new->next = 0;
 //	currnet_node->next = new;
 
-	return (new);
+	return (0);
 }
