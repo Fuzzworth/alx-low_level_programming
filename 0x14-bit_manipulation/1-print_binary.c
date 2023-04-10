@@ -19,10 +19,14 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 			return;
 		}
-		else
+		else if (n >> 1 >= 2)
 		{
-			printf("%lu\n", n >> 1);
+			_putchar('0');
 			n >>= 1;
+		}
+		else if (n >> 1 < 2)
+		{
+			_putchar('0' + (n >> 1));
 		}
 	}
 }
