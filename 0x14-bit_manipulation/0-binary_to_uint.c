@@ -63,7 +63,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int total;
 
 	total = 0;
-	binary_string_length = string_length(b);
+	binary_string_length = string_length(b) - 1;
 
 	for (binary_string_position = binary_string_length;
 			binary_string_position > 0;
