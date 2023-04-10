@@ -41,7 +41,9 @@ unsigned int binary_to_uint(const char *b)
 	total = 0;
 	binary_string_length = string_length(b);
 
-	for (binary_string_position = binary_string_length; binary_string_position > 0; binary_string_position--)
+	for (binary_string_position = binary_string_length;
+			binary_string_position > 0;
+			binary_string_position--)
 	{
 		if (b[binary_string_position] == '1')
 		{
