@@ -11,7 +11,7 @@
  *
  * Return: returns the remainder
  */
-unsigned long int mod(unsigned long int n, int divisor)
+unsigned long int mod(unsigned long int n, unsigned long int divisor)
 {
 	while (n >= divisor)
 		n -= divisor;
