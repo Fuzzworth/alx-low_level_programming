@@ -22,11 +22,12 @@ void print_binary(unsigned long int n)
 		else if (n >> 1 >= 2)
 		{
 			_putchar('0');
-			n >>= 1;
+			n = n >> 1;
 		}
 		else if (n >> 1 < 2)
 		{
 			_putchar('0' + (n >> 1));
+			break;
 		}
 	}
 }
