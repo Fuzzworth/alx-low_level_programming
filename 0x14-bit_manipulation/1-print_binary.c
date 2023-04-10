@@ -1,15 +1,16 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * _puts_digit - prints digits
+ * print_binary - prints digits
  *
  * Description: prints digits
  *
- * @num: integer to print
+ * @n: integer to print
  *
  * Return: return number of characters printed
  */
-int _puts_digit(int num)
+void print_binary(unsigned long int n)
 {
 	int number_of_digits_printed, sign, index;
 	unsigned int num2;
@@ -17,13 +18,13 @@ int _puts_digit(int num)
 
 	number_of_digits_printed = sign = 0;
 
-	if (num < 0)
+	if (n < 0)
 	{
 		sign = 1;
-		num2 = -(num);
+		num2 = -(n);
 	}
 	else
-		num2 = num;
+		num2 = n;
 
 	while (1)
 	{
@@ -49,6 +50,4 @@ int _puts_digit(int num)
 
 	for (index = (number_of_digits_printed - 1); index >= 0; index--)
 		_putchar(num_rev_string[index]);
-
-	return (number_of_digits_printed);
 }
