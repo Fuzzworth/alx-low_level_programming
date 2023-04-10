@@ -9,7 +9,7 @@
  * @n: numerator
  * @divisor: divisor
  *
- * Retrun: returns the remainder
+ * Return: returns the remainder
  */
 unsigned long int mod(unsigned long int n, int divisor)
 {
