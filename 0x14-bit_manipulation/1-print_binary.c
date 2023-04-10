@@ -11,10 +11,10 @@
  *
  * Retrun: returns the remainder;
  */
-unsigned long int mod(unsigned long int n, int num)
+unsigned long int mod(unsigned long int n, int divisor)
 {
-	while (n >= num)
-		n -= num;
+	while (n >= divisor)
+		n -= divisor;
 	return (n);
 }
 
