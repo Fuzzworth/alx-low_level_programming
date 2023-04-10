@@ -14,7 +14,12 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	if (n >= ((unsigned long int) (1 << index)))
-		return (n & (1 << index));
+	{
+		if (n & (1 << index))
+			return (1);
+		else
+			return (0);
+	}
 	else
 		return (-1);
 }
