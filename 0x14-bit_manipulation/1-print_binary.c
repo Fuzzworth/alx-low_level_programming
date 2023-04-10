@@ -19,12 +19,12 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 			return;
 		}
-		else if (n >> 1 > 1)
+		else if (n >> 1 >= 2)
 		{
 			_putchar('0');
 			n = n >> 1;
 		}
-		else if (n >> 1 < 1)
+		else if (n < 2)
 		{
 			_putchar('0' + n);
 			break;
