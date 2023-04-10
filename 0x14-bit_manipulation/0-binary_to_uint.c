@@ -65,6 +65,9 @@ unsigned int binary_to_uint(const char *b)
 	total = 0;
 	binary_string_length = string_length(b) - 1;
 
+	if (b == 0)
+		return (0);
+
 	for (binary_string_position = binary_string_length;
 			binary_string_position >= 0;
 			binary_string_position--)
