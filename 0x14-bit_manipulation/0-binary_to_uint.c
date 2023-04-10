@@ -73,7 +73,8 @@ unsigned int binary_to_uint(const char *b)
 		{
 			total += power(2, (binary_string_length - binary_string_position));
 		}
-		else if (b[binary_string_position] != '0' && b[binary_string_position] != '1')
+		else if (b[binary_string_position] != '0'
+				&& b[binary_string_position] != '1')
 		{
 			return (0);
 		}
