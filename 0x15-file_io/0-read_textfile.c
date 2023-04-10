@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <unistd.h>
 
 /**
  * read_textfile - short description
@@ -36,7 +37,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			fclose(fp);
 			return (number_of_characters_printed);
 		}
-		printf("%c", character_to_print);
+		write(STDOUT_FILENO, &character_to_print, 1);
 		number_of_characters_printed++;
 		character_to_print = fgetc(fp);
 	}
