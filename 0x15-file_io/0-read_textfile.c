@@ -19,6 +19,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *fp;
 
 	number_of_characters_printed = 0;
+	
+	if (filename == NULL)
+		return (0);
+
 	fp = fopen(filename, "r");
 
 	if (fp == NULL)
@@ -27,7 +31,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	character_to_print = fgetc(fp);
-	while (character_to_print)
+	while (number_of_characters_printed <= letters)
 	{
 		printf("%c", character_to_print);
 		if (number_of_characters_printed == letters)
