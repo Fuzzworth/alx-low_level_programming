@@ -2,6 +2,23 @@
 #include "main.h"
 
 /**
+ * mod - function that returns the remainder
+ *
+ * Description: function that returns the remainder
+ *
+ * @n: numerator
+ * @divisor: divisor
+ *
+ * Retrun: returns the remainder;
+ */
+unsigned long int mod(unsigned long int n, int num)
+{
+	while (n >= num)
+		n -= num;
+	return (n);
+}
+
+/**
  * print_binary - prints digits
  *
  * Description: prints digits
@@ -25,6 +42,6 @@ void print_binary(unsigned long int n)
 	else
 	{
 		print_binary(n >> 1);
-		_putchar('0' + (n % 2));
+		_putchar('0' + mod(n, 2));
 	}
 }
