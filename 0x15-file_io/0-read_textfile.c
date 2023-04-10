@@ -14,7 +14,8 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int number_of_characters_printed, character_to_print;
+	ssize_t number_of_characters_printed;
+	int character_to_print;
 	FILE *fp;
 
 	number_of_characters_printed = 0;
