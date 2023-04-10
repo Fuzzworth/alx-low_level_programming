@@ -28,6 +28,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	character_to_print = fgetc(fp);
 	while (character_to_print)
 	{
+		if (number_of_characters_printed == letters)
+			return (number_of_characters_printed);
 		number_of_characters_printed++;
 		_putchar(character_to_print);
 		character_to_print = fgetc(fp);
