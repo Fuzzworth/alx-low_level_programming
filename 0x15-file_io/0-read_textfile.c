@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *fp;
 
 	number_of_characters_printed = 0;
-	
+
 	if (filename == NULL)
 		return (0);
 
