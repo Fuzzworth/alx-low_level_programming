@@ -12,7 +12,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	while (n > 0)
+	while (1)
 	{
 		if (n == 0)
 		{
