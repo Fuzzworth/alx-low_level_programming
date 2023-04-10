@@ -17,17 +17,17 @@ void print_binary(unsigned long int n)
 		if (n == 0)
 		{
 			_putchar('0');
-			return;
+			break;
 		}
-		else if (n >> 1 >= 2)
+		else if (n == 1)
 		{
-			_putchar('0');
-			n = n >> 1;
+			_putchar('1');
+			break;
 		}
-		else if (n < 2)
+		else
 		{
 			_putchar('0' + n);
-			break;
+			n >>= 1;
 		}
 	}
 }
