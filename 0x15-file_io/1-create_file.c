@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-#include <unistd.h>
 
 /**
  * create_file - short description
@@ -19,7 +17,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-	ptr = fopen(filename, "w");
+	ptr = fopen(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (ptr == NULL)
 	{
 		return (-1);
