@@ -37,7 +37,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			fclose(fp);
 			return (number_of_characters_printed);
 		}
-		write(STDOUT_FILENO, &character_to_print, 1);
+
+		if (write(STDOUT_FILENO, &character_to_print, 1) == -1)
+			return (0);
+
 		number_of_characters_printed++;
 		character_to_print = fgetc(fp);
 	}
