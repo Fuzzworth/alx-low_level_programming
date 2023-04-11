@@ -13,18 +13,20 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	FILE *ptr;
+	int ptr;
 
 	if (filename == NULL)
 		return (-1);
-	ptr = fopen(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
-	if (ptr == NULL)
+	ptr = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	if (ptr == -1)
 	{
 		return (-1);
 	}
-	if (text_content)
-		if (fprintf(ptr, "%s", text_content))
+	if (text_content == NULL)
+		text_content = "";
+	
+	if (write(ptr, text_content, strlen(text_content) == -1))
 			return (-1);
-	fclose(ptr);
+	close(ptr);
 	return (1);
 }
