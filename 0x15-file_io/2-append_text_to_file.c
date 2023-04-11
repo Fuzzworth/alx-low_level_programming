@@ -2,7 +2,7 @@
 
 /**
  * append_text_to_file - function that appends text at the end of a file
- * 
+ *
  * Description: function that appends text at the end of a file
  *
  * @filename: filename.
@@ -24,7 +24,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (text_content)
-		if (write(file_descriptor, text_content, strlen(text_content)) == (ssize_t) -1)
+		if (write(file_descriptor, text_content,
+					strlen(text_content)) == (ssize_t) -1)
 			return (-1);
 	close(fd);
 	return (1);
