@@ -27,6 +27,6 @@ int append_text_to_file(const char *filename, char *text_content)
 		if (write(file_descriptor, text_content,
 					strlen(text_content)) == (ssize_t) -1)
 			return (-1);
-	close(fd);
+	close(file_descriptor);
 	return (1);
 }
