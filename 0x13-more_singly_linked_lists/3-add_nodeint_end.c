@@ -34,7 +34,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	else
 	{
 		number_of_nodes = listint_len(*head);
-		temp_tail_ptr = head[number_of_nodes - 1];
+		temp_tail_ptr = head[number_of_nodes];
 		temp_tail_ptr->next = new_node_ptr;
 	}
 	return (new_node_ptr);
