@@ -32,9 +32,9 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 	else
 	{
-		while ((*head)->next)
-			*head = (*head)->next;
 		temp_tail_ptr = *head;
+		while (temp_tail_ptr->next)
+			temp_tail_ptr = temp_tail_ptr->next;
 		temp_tail_ptr->next = new_node_ptr;
 	}
 	return (new_node_ptr);
