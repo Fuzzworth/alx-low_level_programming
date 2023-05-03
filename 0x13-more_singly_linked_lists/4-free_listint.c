@@ -11,13 +11,18 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t next_node;
+	listint_t *previous_node, *next_node;
 
 	if (head == NULL)
 		return;
 
-	for (next_node = *head; next_node; next_node = next_node.next)
+	previous_node = head;
+	next_node = previous_node->next;
+	free(previous_node);
+	while (next_node)
 	{
-
+		free(previous_node);
+		previous_node = next_node;
+		next_node = previous_node->next;
 	}
 }
