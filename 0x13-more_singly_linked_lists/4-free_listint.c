@@ -18,11 +18,11 @@ void free_listint(listint_t *head)
 
 	previous_node = head;
 	next_node = previous_node->next;
-	do {
+	while (next_node){
 		free(previous_node);
 		previous_node = next_node;
 		next_node = next_node->next;
-	} while (next_node);
+	}
 	if (previous_node != NULL)
 		free(previous_node);
 	if (next_node != NULL)
