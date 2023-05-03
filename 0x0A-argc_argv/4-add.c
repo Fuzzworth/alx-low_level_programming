@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
- * isdigit - prints its name, followed by a new line
+ * isdigit - checks if character is a digit
  *
- * Description: prints its name, followed by a new line
+ * Description: checks if character is a digit
  *
- * @n: number symbol
+ * @n: ascii number
  *
- * Return: 0;
+ * Return: 1 if is a digit and 0 if not;
  */
 int isdigit(int n)
 {
@@ -16,9 +16,9 @@ int isdigit(int n)
 }
 
 /**
- * isNumber - prints its name, followed by a new line
+ * isNumber - checks if string is a number
  *
- * Description: prints its name, followed by a new line
+ * Description: checks if string is a number
  *
  * @s: number string
  *
@@ -47,7 +47,9 @@ int isNumber(char *s)
  * @argc: number of arguments
  * @argv: Command line arguments
  *
- * Return: 0;
+ * Return: If no number is passed to the program, print 0, followed
+ * by a new line If one of the number contains symbols that are not
+ * digits, print Error, followed by a new line, and return 1;
  */
 int main(int argc, char *argv[])
 {
