@@ -30,4 +30,6 @@ void free_listint2(listint_t **head)
 		free(previous_node);
 	if (next_node != NULL)
 		free(next_node);
+	if (head != NULL)
+		free(head);
 }
