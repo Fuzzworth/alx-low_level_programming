@@ -18,15 +18,13 @@ int pop_listint(listint_t **head)
 		return (0);
 	if (*head == NULL)
 		return (0);
-	else
+	
+	temp_head_ptr = *head;
+	if (temp_head_ptr->next)
 	{
-		temp_head_ptr = *head;
-		if (temp_head_ptr->next)
-		{
-			new_node_ptr = temp_head_ptr->next;
-			*head = new_node_ptr;
-			return (new_node_ptr->n);
-		}
+		new_node_ptr = temp_head_ptr->next;
+		*head = new_node_ptr;
+		return (new_node_ptr->n);
 	}
 	return (0);
 }
