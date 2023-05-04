@@ -18,7 +18,7 @@ int pop_listint(listint_t **head)
 		return (0);
 	if (*head == NULL)
 		return (0);
-	
+
 	temp_head_ptr = *head;
 	if (temp_head_ptr->next)
 	{
