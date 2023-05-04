@@ -31,5 +31,5 @@ void free_listint2(listint_t **head)
 	if (next_node != NULL)
 		free(next_node);
 	if (head != NULL)
-		free(head);
+		head = NULL;
 }
