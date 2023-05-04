@@ -13,11 +13,12 @@ listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *previvious_node, *next_node = NULL;
 
-	for (; *head; *head = next_node)
+	for (;*head;)
 	{
 		next_node = (*head)->next;
 		(*head)->next = previvious_node;
 		previvious_node = *head;
+		*head = next_node;
 	}
 	*head = previvious_node;
 	return (*head);
