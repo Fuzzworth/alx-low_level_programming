@@ -29,6 +29,11 @@ int pop_listint(listint_t **head)
 		free(temp_head_ptr);
 		return (result);
 	}
-	free(temp_head_ptr);
-	return (0);
+	else
+	{
+		*head = NULL;
+		result = temp_head_ptr->n;
+		free(temp_head_ptr);
+		return (result);
+	}
 }
