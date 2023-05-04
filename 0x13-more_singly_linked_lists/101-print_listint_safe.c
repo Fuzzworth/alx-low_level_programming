@@ -16,14 +16,14 @@ size_t print_listint_safe(const listint_t *head)
 
 	temp_node = linked_node = NULL;
 	temp_node = (listint_t *) head;
-	for (;temp_node;)
+	for (; temp_node;)
 	{
 		printf("[%p] %d\n", (void *)temp_node, temp_node->n);
 		count++;
 		temp_node = temp_node->next;
 		linked_node = (listint_t *) head;
 		new_node = 0;
-		while (new_node < count)
+		for (; new_node < count;)
 		{
 			if (temp_node == linked_node)
 			{
