@@ -27,6 +27,6 @@ int pop_listint(listint_t **head)
 			*head = new_node_ptr;
 			return (new_node_ptr->n);
 		}
-		return (0);
 	}
+	return (0);
 }
