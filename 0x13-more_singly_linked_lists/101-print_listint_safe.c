@@ -15,6 +15,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t count, new_node;
 
 	temp_node = linked_node = NULL;
+	count = 0;
 	temp_node = (listint_t *) head;
 	for (; temp_node;)
 	{
