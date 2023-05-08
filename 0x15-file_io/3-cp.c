@@ -6,19 +6,20 @@
  *
  * @source_file: source file
  * @destination_file: destination_file
- * @return_code: code to be processed
+ * @code: code to be processed
  *
  * Return: void
  */
-void close_error_handler(int return_code, int source_file, int destination_file)
+void close_error_handler(int code, int source_file,
+		int destination_file)
 {
-	if (return_code == FILE_ERROR)
+	if (code == FILE_ERROR)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source_file);
 		exit(100);
 	}
-	return_code = close(destination_file);
-	if (return_code == FILE_ERROR)
+	code = close(destination_file);
+	if (code == FILE_ERROR)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source_file);
 		exit(100);
@@ -36,11 +37,13 @@ void close_error_handler(int return_code, int source_file, int destination_file)
  *
  * Return: void
  */
-void error_handler(int source_file, int destination_file, char *argument_values[])
+void error_handler(int source_file, int destination_file,
+		char *argument_values[])
 {
 	if (source_file == FILE_ERROR)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argument_values[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+				argument_values[1]);
 		exit(98);
 	}
 	if (destination_file == FILE_ERROR)
@@ -68,16 +71,19 @@ int main(int argument_count, char *argument_values[])
 
 	if (argument_count != ARGUMENT_COUNT_EXPECTED)
 	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp source_file destination_file");
+		dprintf(STDERR_FILENO, "%s\n",
+				"Usage: cp source_file destination_file");
 		exit(97);
 	}
 	source_file = open(argument_values[1], O_RDONLY);
-	destination_file = open(argument_values[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	destination_file = open(argument_values[2], O_CREAT | O_WRONLY
+			| O_TRUNC | O_APPEND, 0664);
 	error_handler(source_file, destination_file, argument_values);
 	number_of_characters_read = BUFFER_SIZE;
 	while (number_of_characters_read == BUFFER_SIZE)
 	{
-		number_of_characters_read = read(source_file, file_buffer, BUFFER_SIZE);
+		number_of_characters_read = read(source_file,
+				file_buffer, BUFFER_SIZE);
 		if (number_of_characters_read == FILE_ERROR)
 			error_handler(FILE_ERROR, 0, argument_values);
 		number_of_characters_written = write(destination_file,
@@ -86,6 +92,6 @@ int main(int argument_count, char *argument_values[])
 			error_handler(0, FILE_ERROR, argument_values);
 	}
 	close_code = close(source_file);
-	close_error_handler(close_code,source_file, destination_file);
+	close_error_handler(close_code, source_file, destination_file);
 	return (0);
 }
