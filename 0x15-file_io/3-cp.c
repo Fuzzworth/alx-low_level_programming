@@ -49,7 +49,8 @@ void error_handler(int source_file, int destination_file,
 	}
 	if (destination_file == FILE_ERROR)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argument_values[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
+				argument_values[2]);
 		exit(CANNOT_CREATE_OR_WRITE);
 	}
 }
