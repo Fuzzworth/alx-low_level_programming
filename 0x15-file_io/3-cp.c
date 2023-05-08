@@ -16,13 +16,15 @@ void close_handler(int source_file, int destination_file)
 	code = close(source_file);
 	if (code == FILE_ERROR)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
+				source_file);
 		exit(CANNOT_CLOSE);
 	}
 	code = close(destination_file);
 	if (code == FILE_ERROR)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", destination_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
+				destination_file);
 		exit(CANNOT_CLOSE);
 	}
 }
@@ -74,7 +76,7 @@ int main(int argument_count, char *argument_values[])
 	if (argument_count != ARGUMENT_COUNT_EXPECTED)
 	{
 		dprintf(STDERR_FILENO, "%s\n",
-				"Usage: cp source_file destination_file");
+				"Usage: cp file_from file_to");
 		exit(INVALID_NUMBER_OF_ARGUMENTS);
 	}
 	source_file = open(argument_values[1], O_RDONLY);
