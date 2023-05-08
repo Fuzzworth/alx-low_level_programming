@@ -21,7 +21,7 @@ void close_error_handler(int code, int source_file,
 	code = close(destination_file);
 	if (code == FILE_ERROR)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", destination_file);
 		exit(100);
 	}
 }
