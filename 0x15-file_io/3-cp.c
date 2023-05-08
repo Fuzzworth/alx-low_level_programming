@@ -17,13 +17,13 @@ void close_handler(int source_file, int destination_file)
 	if (code == FILE_ERROR)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source_file);
-		exit(100);
+		exit(CANNOT_CLOSE);
 	}
 	code = close(destination_file);
 	if (code == FILE_ERROR)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", destination_file);
-		exit(100);
+		exit(CANNOT_CLOSE);
 	}
 }
 
@@ -45,12 +45,12 @@ void error_handler(int source_file, int destination_file,
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
 				argument_values[1]);
-		exit(98);
+		exit(DOES_NOT_EXIST_OR_UNABLE_TO_READ);
 	}
 	if (destination_file == FILE_ERROR)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argument_values[2]);
-		exit(99);
+		exit(CANNOT_CREATE_OR_WRITE);
 	}
 }
 
@@ -74,7 +74,7 @@ int main(int argument_count, char *argument_values[])
 	{
 		dprintf(STDERR_FILENO, "%s\n",
 				"Usage: cp source_file destination_file");
-		exit(97);
+		exit(INVALID_NUMBER_OF_ARGUMENTS);
 	}
 	source_file = open(argument_values[1], O_RDONLY);
 	destination_file = open(argument_values[2], O_CREAT | O_WRONLY
