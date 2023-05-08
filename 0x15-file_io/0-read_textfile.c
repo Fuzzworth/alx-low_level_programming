@@ -33,11 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	while (number_of_characters_printed <= letters)
 	{
 		if (number_of_characters_printed == letters || character_to_print == -1)
-		{
-			fclose(file_stream);
-			return (number_of_characters_printed);
-		}
-
+			break;
 		if (write(STDOUT_FILENO, &character_to_print, 1) == -1)
 			return (0);
 
