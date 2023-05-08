@@ -1,5 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
+#define BUFFER_SIZE 1024
+#define FILE_ERROR -1
+#define ARGUMENT_COUNT_EXPECTED 3
 
 #include <elf.h>
 #include <stdlib.h>
