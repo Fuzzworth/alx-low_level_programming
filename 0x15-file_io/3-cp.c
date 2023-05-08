@@ -1,18 +1,19 @@
 #include "main.h"
 /**
- * close_error_handler - function to handle close errors
+ * close_handler - function to handle close errors
  *
  * Description: function to handle close errors
  *
  * @source_file: source file
  * @destination_file: destination_file
- * @code: code to be processed
  *
  * Return: void
  */
-void close_error_handler(int code, int source_file,
-		int destination_file)
+void close_handler(int source_file, int destination_file)
 {
+	int code;
+
+	code = close(source_file);
 	if (code == FILE_ERROR)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source_file);
@@ -65,7 +66,7 @@ void error_handler(int source_file, int destination_file,
  */
 int main(int argument_count, char *argument_values[])
 {
-	int source_file, destination_file, close_code;
+	int source_file, destination_file;
 	char file_buffer[BUFFER_SIZE];
 	ssize_t number_of_characters_read, number_of_characters_written;
 
@@ -91,7 +92,6 @@ int main(int argument_count, char *argument_values[])
 		if (number_of_characters_written == FILE_ERROR)
 			error_handler(0, FILE_ERROR, argument_values);
 	}
-	close_code = close(source_file);
-	close_error_handler(close_code, source_file, destination_file);
+	close_handler(source_file, destination_file);
 	return (0);
 }
