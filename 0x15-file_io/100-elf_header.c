@@ -136,7 +136,7 @@ void print_osabi(Elf64_Ehdr *e)
 			osabi_str = "ARM";
 			break;
 		case ELFOSABI_STANDALONE:
-			osabi_str = "Standalone (embedded) application";
+			osabi_str = "Standalone application";
 			break;
 		default:
 			printf("<unknown: %x>\n", e->e_ident[EI_OSABI]);
@@ -242,6 +242,25 @@ void print_all(Elf64_Ehdr *ehdr, int fd)
 }
 
 /**
+ * iself - function to check if is ELF
+ *
+ * @e_ident: A pointer to an array containing the ELF magic numbers
+ *
+ * Return: void
+ */
+void iself(unsigned char *e_ident)
+{
+	if (e_ident[0] != 127 &&
+			e_ident[1] != 'E' &&
+			e_ident[2] != 'L' &&
+			e_ident[3] != 'F')
+	{
+		dprintf(STDERR_FILENO, "Error: Invalid ELF file\n");
+		exit(98);
+	}
+}
+
+/**
  * main - prints the ELF headers of a given file
  *
  * @argc: the number of arguments passed to the program
@@ -262,7 +281,7 @@ int main(int argc, char *argv[])
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		fprintf(stderr, "ERRor: File %s failed to open\n", argv[1]);
+		fprintf(stderr, "Error: File %s failed to open\n", argv[1]);
 		exit(98);
 	}
 	if (read(fd, &ehdr, sizeof(ehdr)) != sizeof(ehdr))
@@ -271,6 +290,7 @@ int main(int argc, char *argv[])
 		close(fd);
 		exit(98);
 	}
+	iself(ehdr.e_ident);
 	print_all(&ehdr, fd);
 	close(fd);
 	return (0);
