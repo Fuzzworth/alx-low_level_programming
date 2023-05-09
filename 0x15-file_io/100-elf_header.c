@@ -115,7 +115,7 @@ void print_osabi(Elf64_Ehdr *e)
 			osabi_str = "UNIX - System V";
 			break;
 		case ELFOSABI_HPUX:
-			osabi_str = "HP-UX";
+			osabi_str = "UNIX - HP-UX";
 			break;
 		case ELFOSABI_NETBSD:
 			osabi_str = "UNIX - NetBSD";
