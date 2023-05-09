@@ -39,7 +39,7 @@ void print_class(unsigned char *e_ident)
 	switch (e_ident[EI_CLASS])
 	{
 		case ELFCLASSNONE:
-			printf("NONE\n");
+			printf("none\n");
 			break;
 		case ELFCLASS32:
 			printf("ELF32\n");
@@ -72,7 +72,7 @@ void print_data(Elf64_Ehdr *e)
 			printf("2's complement, big endian\n");
 			break;
 		case ELFDATANONE:
-			printf("NONE\n");
+			printf("none\n");
 			break;
 		default:
 			printf("<unknown: %x>\n", e->e_ident[EI_DATA]);
@@ -184,7 +184,7 @@ void print_type(uint16_t e_type)
 	switch (e_type)
 	{
 		case ET_NONE:
-			printf("NONE (NONE)\n");
+			printf("NONE (None)\n");
 			break;
 		case ET_REL:
 			printf("REL (Relocatable file)\n");
@@ -258,7 +258,7 @@ void iself(unsigned char *e_ident)
 			e_ident[2] != 'L' &&
 			e_ident[3] != 'F')
 	{
-		dprintf(STDERR_FILENO, "Error: Invalid ELF file\n");
+		fprintf(stderr, "Error: Invalid ELF file\n");
 		exit(98);
 	}
 }
