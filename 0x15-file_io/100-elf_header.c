@@ -39,7 +39,7 @@ void print_class(unsigned char *e_ident)
 	switch (e_ident[EI_CLASS])
 	{
 		case ELFCLASSNONE:
-			printf("Invalid class\n");
+			printf("NONE\n");
 			break;
 		case ELFCLASS32:
 			printf("ELF32\n");
@@ -70,6 +70,9 @@ void print_data(Elf64_Ehdr *e)
 			break;
 		case ELFDATA2MSB:
 			printf("2's complement, big endian\n");
+			break;
+		case ELFDATANONE:
+			printf("NONE\n");
 			break;
 		default:
 			printf("<unknown: %x>\n", e->e_ident[EI_DATA]);
@@ -104,7 +107,7 @@ void print_version(Elf64_Ehdr *e)
  */
 void print_osabi(Elf64_Ehdr *e)
 {
-	char *osabi_str = "Unknown";
+	char *osabi_str;
 
 	switch (e->e_ident[EI_OSABI])
 	{
@@ -167,6 +170,7 @@ void print_abiversion(int file)
 
 	printf("  ABI Version:                       %d\n",
 			elf_header->e_ident[EI_ABIVERSION]);
+	free(elf_header);
 }
 
 /**
@@ -181,7 +185,7 @@ void print_type(uint16_t e_type)
 	switch (e_type)
 	{
 		case ET_NONE:
-			printf("NONE (No file type)\n");
+			printf("NONE (NONE)\n");
 			break;
 		case ET_REL:
 			printf("REL (Relocatable file)\n");
