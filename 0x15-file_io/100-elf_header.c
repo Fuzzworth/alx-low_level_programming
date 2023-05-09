@@ -19,7 +19,7 @@ void print_magic_number(unsigned char *e_ident)
 	printf("  Magic:   ");
 	for (i = 0; i < EI_NIDENT; i++)
 		printf("%02x%c", e_ident[i],
-				i == EI_NIDENT - 1 ? '\n':' ');
+				i == EI_NIDENT - 1 ? '\n' : ' ');
 }
 
 /**
