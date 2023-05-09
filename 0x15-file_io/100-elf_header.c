@@ -170,7 +170,6 @@ void print_abiversion(int file)
 
 	printf("  ABI Version:                       %d\n",
 			elf_header->e_ident[EI_ABIVERSION]);
-	free(elf_header);
 }
 
 /**
