@@ -15,6 +15,7 @@ void print_magic_number(unsigned char *e_ident)
 {
 	int i;
 
+	printf("ELF Header:\n");
 	printf("  Magic:   ");
 	for (i = 0; i < EI_NIDENT; i++)
 		printf("%02x%c", e_ident[i],
@@ -47,7 +48,7 @@ void print_class(unsigned char *e_ident)
 			printf("ELF64\n");
 			break;
 		default:
-			printf("Unknown class\n");
+			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 			break;
 	}
 }
@@ -71,7 +72,7 @@ void print_data(Elf64_Ehdr *e)
 			printf("2's complement, big endian\n");
 			break;
 		default:
-			printf("<unknown>\n");
+			printf("<unknown: %x>\n", e->e_ident[EI_DATA]);
 			break;
 	}
 }
@@ -111,34 +112,36 @@ void print_osabi(Elf64_Ehdr *e)
 			osabi_str = "UNIX - System V";
 			break;
 		case ELFOSABI_HPUX:
-			osabi_str = "HP-UX ABI";
+			osabi_str = "HP-UX";
 			break;
 		case ELFOSABI_NETBSD:
-			osabi_str = "NetBSD ABI";
+			osabi_str = "UNIX - NetBSD";
 			break;
 		case ELFOSABI_LINUX:
-			osabi_str = "Linux ABI";
+			osabi_str = "UNIX - Linux";
 			break;
 		case ELFOSABI_SOLARIS:
-			osabi_str = "Solaris ABI";
+			osabi_str = "UNIX - Solaris";
 			break;
 		case ELFOSABI_IRIX:
-			osabi_str = "IRIX ABI";
+			osabi_str = "UNIX - IRIX";
 			break;
 		case ELFOSABI_FREEBSD:
-			osabi_str = "FreeBSD ABI";
+			osabi_str = "UNIX - FreeBSD";
 			break;
 		case ELFOSABI_TRU64:
-			osabi_str = "TRU64 UNIX ABI";
+			osabi_str = "UNIX - TRU64";
 			break;
 		case ELFOSABI_ARM:
-			osabi_str = "ARM architecture ABI";
+			osabi_str = "ARM";
 			break;
 		case ELFOSABI_STANDALONE:
 			osabi_str = "Standalone (embedded) application";
 			break;
+		default:
+			printf("<unknown: %x>\n", e->e_ident[EI_OSABI]);
+			break;
 	}
-
 	printf("  OS/ABI:                            %s\n",
 			osabi_str);
 }
@@ -219,6 +222,26 @@ void print_entry(void *elf_header)
 }
 
 /**
+ * print_all - prints all sections
+ *
+ * @ehdr: elf header
+ * @fd: file descriptor
+ *
+ * Returns: void
+ */
+void print_all(Elf64_Ehdr *ehdr, int fd)
+{
+	print_magic_number(ehdr->e_ident);
+	print_class(ehdr->e_ident);
+	print_data(ehdr);
+	print_version(ehdr);
+	print_osabi(ehdr);
+	print_abiversion(fd);
+	print_type(ehdr->e_type);
+	print_entry(ehdr);
+}
+
+/**
  * main - prints the ELF headers of a given file
  *
  * @argc: the number of arguments passed to the program
@@ -239,7 +262,7 @@ int main(int argc, char *argv[])
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		perror("open");
+		fprintf(stderr, "ERRor: File %s failed to open\n", argv[1]);
 		exit(98);
 	}
 	if (read(fd, &ehdr, sizeof(ehdr)) != sizeof(ehdr))
@@ -248,15 +271,7 @@ int main(int argc, char *argv[])
 		close(fd);
 		exit(98);
 	}
-	printf("ELF Header:\n");
-	print_magic_number(ehdr.e_ident);
-	print_class(ehdr.e_ident);
-	print_data(&ehdr);
-	print_version(&ehdr);
-	print_osabi(&ehdr);
-	print_abiversion(fd);
-	print_type(ehdr.e_type);
-	print_entry(&ehdr);
+	print_all(&ehdr, fd);
 	close(fd);
 	return (0);
 }
