@@ -234,19 +234,19 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		fprintf(stderr, "Usage: %s <file>\n", argv[0]);
-		return (1);
+		exit(98);
 	}
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
 		perror("open");
-		return (2);
+		exit(98);
 	}
 	if (read(fd, &ehdr, sizeof(ehdr)) != sizeof(ehdr))
 	{
 		fprintf(stderr, "Error: Failed to read ELF header\n");
 		close(fd);
-		return (3);
+		exit(98);
 	}
 	printf("ELF Header:\n");
 	print_magic_number(ehdr.e_ident);
