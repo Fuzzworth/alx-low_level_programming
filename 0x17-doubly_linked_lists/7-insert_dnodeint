@@ -1,0 +1,24 @@
+/* ADD HEADERS */
+//#include <stdio.h>
+//#include "main.h"
+/* END HEADERS */
+
+/* ADD DOC COMMENTS */
+/**
+ * function_name - short description
+ *
+ * Description: long description
+ *
+ * @argument_1: argument_1 description
+ * @argument_2: argument_2 description
+ *
+ * Return: return description
+ */
+/* END DOC COMMENTS */
+
+/* FUNCTION START HERE */
+int function_name(int argument_1, int argument_2)
+{
+	/* CODE GOES HERE */
+	// return (0);
+}
