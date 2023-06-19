@@ -1,3 +1,3 @@
 #!/bin/bash
 wget https://raw.githubusercontent.com/Fuzzworth/alx-low_level_programming/master/0x18-dynamic_libraries/librand.so -O ../librand.so
-unset LD_PRELOAD
+export LD_PRELOAD="../librand.so"
