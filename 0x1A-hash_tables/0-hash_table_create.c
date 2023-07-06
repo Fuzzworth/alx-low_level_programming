@@ -29,7 +29,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		(new_table->array)[index] = (hash_node_t *) malloc(sizeof(hash_node_t));
 		if ((new_table->array)[index] == NULL)
 		{
-			for(free_index = 0; free_index < index; free_index++)
+			for (free_index = 0; free_index < index; free_index++)
 				free((new_table->array)[free_index]);
 			free(new_table->array);
 			free(new_table);
