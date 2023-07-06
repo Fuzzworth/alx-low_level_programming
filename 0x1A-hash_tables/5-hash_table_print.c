@@ -14,13 +14,16 @@ void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *current_node;
 	unsigned long int array_index;
-	int is_first;
+	int is_first, is_first_hash;
 
 	printf("{");
+	is_first_hash = 1;
 	for (array_index = 0; array_index < ht->size; array_index++)
 	{
 		if ((ht->array)[array_index] == NULL)
 			continue;
+		if (!is_first_hash)
+			printf(", ");
 		current_node = (ht->array)[array_index];
 		is_first = 1;
 		while (current_node)
@@ -32,6 +35,7 @@ void hash_table_print(const hash_table_t *ht)
 			is_first = 0;
 			current_node = current_node->next;
 		}
+		is_first_hash = 0;
 	}
 	printf("}\n");
 }
