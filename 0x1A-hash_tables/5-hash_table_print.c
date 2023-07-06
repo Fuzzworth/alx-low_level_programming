@@ -16,6 +16,8 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int array_index;
 	int is_first, is_first_hash;
 
+	if (ht == NULL)
+		return;
 	printf("{");
 	is_first_hash = 1;
 	for (array_index = 0; array_index < ht->size; array_index++)
@@ -35,6 +37,7 @@ void hash_table_print(const hash_table_t *ht)
 			is_first = 0;
 			current_node = current_node->next;
 		}
+		current_node = NULL;
 		is_first_hash = 0;
 	}
 	printf("}\n");
