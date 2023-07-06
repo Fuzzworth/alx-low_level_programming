@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * function_name - function that gives you the index of a key
+ * key_index - function that gives you the index of a key
  *
  * Description: function that gives you the index of a key
  *
