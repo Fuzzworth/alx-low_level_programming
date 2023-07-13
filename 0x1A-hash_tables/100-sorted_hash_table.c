@@ -80,7 +80,7 @@ int shash_sorted_list_insert(shash_table_t **ht, shash_node_t **new_node,
 	old_head = (*ht)->shead;
 	while (old_head)
 	{
-		if (strcmp(old_head->key, key) < 0)
+		if (strcmp(old_head->key, key) > 0)
 		{
 			(*new_node)->snext = old_head;
 			(*new_node)->sprev = old_head->sprev;
