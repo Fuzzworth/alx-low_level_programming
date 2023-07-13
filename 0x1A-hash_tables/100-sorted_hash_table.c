@@ -32,6 +32,74 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
+ * shash_sorted_list_update - update 
+ *
+ * @ht: sorted
+ * @new_node: node
+ * @key: key
+ * @value: value
+ *
+ * Returns: 1 or 0
+ */
+int shash_sorted_list_update(shash_table_t *ht, shash_node_t *new_node,
+		const char *key, const char *value)
+{
+	shash_node_t *old_head = NULL;
+
+	old_head = ht->shead;
+	while (old_head)
+	{
+		if (strcmp(old_head->key, key) == 0)
+		{
+			free(old_head->value);
+			old_head->value = (char *) strdup(value);
+			free(new_node->key);
+			free(new_node->value);
+			free(new_node);
+			return (1);
+		}
+		old_head = old_head->snext;
+	}
+	return (0);
+}
+
+/**
+ * shash_sorted_list_insert - insert
+ *
+ * @ht: sorted
+ * @new_node: node
+ * @key: key
+ *
+ * Returns: 1 or 0
+ */
+int shash_sorted_list_insert(shash_table_t *ht, shash_node_t *new_node,
+		const char *key)
+{
+	shash_node_t *old_head = NULL;
+
+	old_head = ht->shead;
+	while (old_head)
+	{
+		if (strcmp(old_head->key, key) < 0)
+		{
+			new_node->snext = old_head;
+			new_node->sprev = old_head->sprev;
+			if (old_head->sprev != NULL)
+				old_head->sprev->snext = new_node;
+			else
+				ht->shead = new_node;
+			old_head->sprev = new_node;
+			return (1);
+		}
+		old_head = old_head->snext;
+	}
+	new_node->sprev = ht->stail;
+	ht->stail->snext = new_node;
+	ht->stail = new_node;
+	return (1);
+}
+
+/**
  * shash_insert_into_sorted_list - inserts into sorted list
  *
  * Description: inserts into buckets
@@ -61,40 +129,9 @@ int shash_insert_into_sorted_list(shash_table_t *ht, const char *key,
 	}
 	else
 	{
-		old_head = ht->shead;
-		while (old_head)
-		{
-			if (strcmp(old_head->key, key) == 0)
-			{
-				free(old_head->value);
-				old_head->value = (char *) strdup(value);
-				free(new_node->key);
-				free(new_node->value);
-				free(new_node);
-				return (1);
-			}
-			old_head = old_head->snext;
-		}
-		old_head = ht->shead;
-		while (old_head)
-		{
-			if (strcmp(old_head->key, key) < 0)
-			{
-				new_node->snext = old_head;
-				new_node->sprev = old_head->sprev;
-				if (old_head->sprev != NULL)
-					old_head->sprev->snext = new_node;
-				else
-					ht->shead = new_node;
-				old_head->sprev = new_node;
-				return (1);
-			}
-			old_head = old_head->snext;
-		}
-		new_node->sprev = ht->stail;
-		ht->stail->snext = new_node;
-		ht->stail = new_node;
-		return (1);
+		if (!shash_sorted_list_update(ht, new_node, key, value))
+			return (0);		
+		return shash_sorted_list_insert(ht, new_node, key);
 	}
 }
 
