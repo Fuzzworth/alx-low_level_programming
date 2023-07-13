@@ -32,14 +32,14 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * shash_sorted_list_update - update 
+ * shash_sorted_list_update - update
  *
  * @ht: sorted
  * @new_node: node
  * @key: key
  * @value: value
  *
- * Returns: 1 or 0
+ * Return: 1 or 0
  */
 int shash_sorted_list_update(shash_table_t *ht, shash_node_t *new_node,
 		const char *key, const char *value)
@@ -70,7 +70,7 @@ int shash_sorted_list_update(shash_table_t *ht, shash_node_t *new_node,
  * @new_node: node
  * @key: key
  *
- * Returns: 1 or 0
+ * Return: 1 or 0
  */
 int shash_sorted_list_insert(shash_table_t *ht, shash_node_t *new_node,
 		const char *key)
@@ -102,16 +102,14 @@ int shash_sorted_list_insert(shash_table_t *ht, shash_node_t *new_node,
 /**
  * shash_insert_into_sorted_list - inserts into sorted list
  *
- * Description: inserts into buckets
- *
  * @ht: Sorted hash table
  * @key: key
  * @value: value
  *
- * Return 1 if success 0 if failure
+ * Return: 1 if success 0 if failure
  */
 int shash_insert_into_sorted_list(shash_table_t *ht, const char *key,
-		const char * value)
+		const char *value)
 {
 	shash_node_t *new_node = NULL, *old_head = NULL;
 
@@ -130,8 +128,8 @@ int shash_insert_into_sorted_list(shash_table_t *ht, const char *key,
 	else
 	{
 		if (!shash_sorted_list_update(ht, new_node, key, value))
-			return (0);		
-		return shash_sorted_list_insert(ht, new_node, key);
+			return (0);
+		return (shash_sorted_list_insert(ht, new_node, key));
 	}
 }
 
@@ -143,13 +141,11 @@ int shash_insert_into_sorted_list(shash_table_t *ht, const char *key,
  * @ht: Sorted hash table
  * @key: key
  * @value: value
- * @index: index
- * @new_node: new node
  *
- * Return 1 if success 0 if failure
+ * Return: 1 if success 0 if failure
  */
 int shash_insert_into_array(shash_table_t *ht, const char *key,
-		const char * value)
+		const char *value)
 {
 	unsigned long int index = 0;
 	shash_node_t *new_node = NULL, *old_head = NULL;
@@ -208,7 +204,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		return (0);
 	if (strlen(key) == 0)
 		return (0);
-	if(!shash_insert_into_array(ht, key, value))
+	if (!shash_insert_into_array(ht, key, value))
 		return (0);
 	return (shash_insert_into_sorted_list(ht, key, value));
 }
@@ -264,7 +260,7 @@ void shash_table_print(const shash_table_t *ht)
 	printf("{");
 	is_first_hash = 1;
 	current_node = ht->shead;
-	while(current_node)
+	while (current_node)
 	{
 		if (!is_first_hash)
 			printf(", ");
@@ -296,7 +292,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 	printf("{");
 	is_first_hash = 1;
 	current_node = ht->stail;
-	while(current_node)
+	while (current_node)
 	{
 		if (!is_first_hash)
 			printf(", ");
@@ -362,7 +358,7 @@ void shash_table_delete_slist(const shash_table_t *ht)
 		return;
 	current_node = ht->shead;
 	previous_node = NULL;
-	while(current_node)
+	while (current_node)
 	{
 		previous_node = current_node;
 		current_node = current_node->snext;
