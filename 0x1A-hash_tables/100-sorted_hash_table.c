@@ -111,7 +111,7 @@ int shash_sorted_list_insert(shash_table_t *ht, shash_node_t *new_node,
 int shash_insert_into_sorted_list(shash_table_t *ht, const char *key,
 		const char *value)
 {
-	shash_node_t *new_node = NULL, *old_head = NULL;
+	shash_node_t *new_node = NULL;
 
 	new_node = (shash_node_t *) malloc(sizeof(shash_node_t));
 	if (new_node == NULL)
