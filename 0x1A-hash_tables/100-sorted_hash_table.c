@@ -128,8 +128,9 @@ int shash_insert_into_sorted_list(shash_table_t *ht, const char *key,
 	else
 	{
 		if (!shash_sorted_list_update(&ht, &new_node, key, value))
-			return (0);
-		return (shash_sorted_list_insert(&ht, &new_node, key));
+			return (shash_sorted_list_insert(&ht, &new_node, key));
+		else
+			return (1);
 	}
 }
 
