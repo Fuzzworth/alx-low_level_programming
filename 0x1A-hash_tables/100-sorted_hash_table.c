@@ -41,7 +41,7 @@ shash_table_t *shash_table_create(unsigned long int size)
  *
  * Return: 1 or 0
  */
-int shash_sorted_list_update(shash_table_t **ht, shash_node_t *new_node,
+int shash_sorted_list_update(shash_table_t **ht, shash_node_t **new_node,
 		const char *key, const char *value)
 {
 	shash_node_t *old_head = NULL;
@@ -53,9 +53,9 @@ int shash_sorted_list_update(shash_table_t **ht, shash_node_t *new_node,
 		{
 			free(old_head->value);
 			old_head->value = (char *) strdup(value);
-			free(new_node->key);
-			free(new_node->value);
-			free(new_node);
+			free((*new_node)->key);
+			free((*new_node)->value);
+			free((*new_node));
 			return (1);
 		}
 		old_head = old_head->snext;
@@ -72,7 +72,7 @@ int shash_sorted_list_update(shash_table_t **ht, shash_node_t *new_node,
  *
  * Return: 1 or 0
  */
-int shash_sorted_list_insert(shash_table_t **ht, shash_node_t *new_node,
+int shash_sorted_list_insert(shash_table_t **ht, shash_node_t **new_node,
 		const char *key)
 {
 	shash_node_t *old_head = NULL;
@@ -82,20 +82,20 @@ int shash_sorted_list_insert(shash_table_t **ht, shash_node_t *new_node,
 	{
 		if (strcmp(old_head->key, key) < 0)
 		{
-			new_node->snext = old_head;
-			new_node->sprev = old_head->sprev;
+			(*new_node)->snext = old_head;
+			(*new_node)->sprev = old_head->sprev;
 			if (old_head->sprev != NULL)
-				old_head->sprev->snext = new_node;
+				old_head->sprev->snext = *new_node;
 			else
-				(*ht)->shead = new_node;
-			old_head->sprev = new_node;
+				(*ht)->shead = *new_node;
+			old_head->sprev = *new_node;
 			return (1);
 		}
 		old_head = old_head->snext;
 	}
-	new_node->sprev = (*ht)->stail;
-	(*ht)->stail->snext = new_node;
-	(*ht)->stail = new_node;
+	(*new_node)->sprev = (*ht)->stail;
+	(*ht)->stail->snext = *new_node;
+	(*ht)->stail = *new_node;
 	return (1);
 }
 
@@ -127,9 +127,9 @@ int shash_insert_into_sorted_list(shash_table_t *ht, const char *key,
 	}
 	else
 	{
-		if (!shash_sorted_list_update(&ht, new_node, key, value))
+		if (!shash_sorted_list_update(&ht, &new_node, key, value))
 			return (0);
-		return (shash_sorted_list_insert(&ht, new_node, key));
+		return (shash_sorted_list_insert(&ht, &new_node, key));
 	}
 }
 
