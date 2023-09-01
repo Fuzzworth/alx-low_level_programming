@@ -3,3 +3,9 @@
 MODULE DOCS
 """
 
+
+def island_perimeter(grid):
+    """
+    Function Doc
+    """
+    pass
